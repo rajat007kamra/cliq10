@@ -1,0 +1,23 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN005",
+  "testName": "LOGIN_INVALIDCREDENTIALS_WithoutEnteringUserameAndPassword",
+  "testDescription": "TRY BLANK CREDENTIALS",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "",
+        "password": "",
+        "expected_error": "LOGIN FAILED: CHECK USERNAME/PASSWORD"
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "testType": "APPROVERS",
+  "sector": "MEZOCLIQ",
+  "module": "APPROVERS",
+  "feature": "APPROVERS",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "APPROVERS",
+  "testId": "TCCLIQAPPROVERS001",
+  "testName": "APPROVERS_RULE_CONFIGURATION_HAVING_SPECIFICITY_COMPANYWIDE",
+  "testDescription": "RULE_WITHOUT_PROCESS_CLARIFIER",
+  "testObjectives": "Approvers",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "GURKIRAT.SINGH"
+      }
+    },
+        {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "APPROVERS"
+      }
+    },
+    {
+      "name": "CREATE-RECORD"
+    },
+    {
+      "name": "POPULATE-FORM",
+      "context": {
+        "column": [
+          {
+            "variable": "SPECIFICITY",
+            "value": "COMPANY-WIDE"
+          },
+          {
+            "variable": "PROCESS",
+            "value": "TEAM"
+          },
+                    {
+            "variable": "DEADLINE",
+            "value": "+2"
+          },
+                    {
+            "variable": "PENDING APPROVAL",
+            "value": "-2"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

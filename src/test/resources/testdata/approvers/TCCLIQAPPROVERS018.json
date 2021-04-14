@@ -1,0 +1,97 @@
+{
+  "testType": "APPROVERS",
+  "sector": "MEZOCLIQ",
+  "module": "APPROVERS",
+  "feature": "APPROVERS",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "APPROVERS",
+  "testId": "TCCLIQAPPROVERS003",
+  "testName": "APPROVERS_RULE_CONFIGRATION_FOR_DIFFERENT_STAGES_OF_WITHDRAWAL_FOR_DENIAL",
+  "testDescription": "APPROVAL_RULE_CHECK_FOR_DENY",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "GURKIRAT.SINGH"
+      }
+    },
+        {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "TEAMS"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "text": "OFFBOARDING"
+          },
+          {
+            "title": "TEAM",
+            "text": "WITHDRAW TEST"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "DENY-RECORD",
+      "context": {
+      "access": "NO"
+       }
+    },
+    {
+      "name": "LOGOUT"
+    },
+    {
+    "name":"SWITCH-TAB",
+    "context":{
+        "switchtab":"CHILD"
+       }
+    },
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "RAJAT.KAMRA"
+      }
+    },
+     {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "TEAMS"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "text": "OFFBOARDING"
+          },
+          {
+            "title": "TEAM",
+            "text": "WITHDRAW TEST"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "DENY-RECORD",
+      "context": {
+      "access": "NO"
+       }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

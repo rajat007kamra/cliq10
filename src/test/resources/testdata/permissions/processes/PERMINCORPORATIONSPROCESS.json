@@ -1,0 +1,81 @@
+{
+  "testType": "ASSIGN",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "ASSIGN PERMISSIONS",
+  "group": "TEST PERMISSIONS",
+  "category": "BASICS",
+  "battery": "PERMISSION",
+  "testId": "PERMINCORPORATIONSPROCESS",
+  "testName": "PERMISSIONS_CheckIncorporationsProcessMixedAccess",
+  "testDescription": "CHECK MIXED ACCESS OF INCORPORATIONS PROCESS TO USER AND MAX RECORDS",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ-.PERMISSIONS-01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "INCORPORATIONS"
+      }
+    },
+    {
+      "name": "CHECK-RECORD",
+      "context": {
+      "records" : "MAX"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "INCORPORATION",
+            "text": "MEZOCLIQ ADJ EQUITY"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "REVISE-RECORD",
+      "context": {
+        "access": "YES"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "PENDING"
+          },
+          {
+            "title": "INCORPORATION",
+            "text": "TEST.SS007 002"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "REVISE-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

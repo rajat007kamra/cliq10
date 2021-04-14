@@ -1,0 +1,72 @@
+{
+  "testType": "SHARE",
+  "sector": "MEZOCLIQ",
+  "module": "REPORT TEMPLATES",
+  "feature": "INTERNAL RECIPIENT TEMPLATE",
+  "group": "TEST REPORT TEMPLATES",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQTEMP10",
+  "testName": "TEMPLATES_EXCEL_SINGLE_EXCEL_ShareScheduledReportsWithInternalUser",
+  "testDescription": "HAVE A TEMPLATE THROUGH WHICH SCHEDULED REPORTS CAN BE SHARED WITH INTERNAL USERS",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES",
+        "column": [
+          {
+            "title": "REPORT TEMPLATE",
+            "text": "BOTZ.SHARE INTERNAL USER"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "MODIFY-ACCORDION",
+      "context": {
+        "accordion": "RIGHT",
+        "state": "EXPAND"
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "OPEN-FLYOUT",
+      "context": {
+        "flexname": "QUICKLIST",
+        "flyoutname": "EMAIL RECIPIENTS - INTERNAL"
+      }
+    },
+    {
+      "name": "POPULATE-HORIZONTALFLYOUT",
+      "context": {
+        "column": [
+          {
+            "title": "USER",
+            "text": "ARUN.KAPOOR"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "CLOSE-WIDGET"
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "suites": [
+    {
+      "category": "BASICS",
+      "battery": "LOGIN",
+	  "suiteName": "LOGIN - CORE TESTCASES",
+	  "suiteDescription": "Login Test Suite",
+	  "note": "Login test cases",
+	  "testCases": [
+	        "src/test/resources/testdata/login/loginTC-001.json",
+	        "src/test/resources/testdata/login/loginTC-002.json",
+	    	"src/test/resources/testdata/login/loginTC-003.json",
+			"src/test/resources/testdata/login/loginTC-004.json",
+			"src/test/resources/testdata/login/loginTC-005.json",
+			"src/test/resources/testdata/login/loginTC-006.json",
+	    	"src/test/resources/testdata/login/loginTC-007.json",
+			"src/test/resources/testdata/login/loginTC-008.json",
+			"src/test/resources/testdata/login/loginTC-009.json",
+			"src/test/resources/testdata/login/loginTC-010.json",
+			"src/test/resources/testdata/login/loginTC-011.json",
+			"src/test/resources/testdata/login/loginTC-012.json",
+			"src/test/resources/testdata/login/loginTC-013.json",
+			"src/test/resources/testdata/login/loginTC-014.json",
+			"src/test/resources/testdata/login/loginTC-015.json",
+			"src/test/resources/testdata/login/loginTC-016.json",
+			"src/test/resources/testdata/login/loginTC-017.json",
+			"src/test/resources/testdata/login/loginTC-018.json"
+	      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "suites": [
+    {
+      "category": "INTEGRATION",
+      "battery": "FILES",
+      "suiteName": "FILE_ACTUALFILES",
+      "suiteDescription": "Feeds File Upload Test Suite",
+      "note": "FILE ACTUALFILES",
+      "testCases": [
+        "src/test/resources/testdata/file-upload/files_actualfiles/BLOOMBERGRATE.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/BLOOMBERGSECURITY.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/DEMOTEAM.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/DEMONONFIXEDINCOME.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/IDCPRICES.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/MOODYRATINGS.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/ODSACCOUNT.json",        
+        "src/test/resources/testdata/file-upload/files_actualfiles/TAXPORTCONTRACTAFFILIATE.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/WORKDAYEMPLOYEE.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/XECURRENCY.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "testType": "ASSIGN",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "ASSIGN PERMISSIONS",
+  "group": "TEST PERMISSIONS",
+  "category": "BASICS",
+  "battery": "PERMISSION",
+  "testId": "PERMCHECKREALMACCESS",
+  "testName": "PERMISSIONS_CheckDocumentsRealmDisabledAccess",
+  "testDescription": "CHECK USER HAS NO ACCESS OF DOCUMENTS REALM",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ-.PERMISSIONS-01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "DOCUMENTS",
+        "access": "NO"        
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "testType": "DUPLICATE",
+  "sector": "SE2",
+  "module": "TEMPLATE",
+  "feature": "EXISTING TEMPLATE",
+  "group": "TEST TEMPLATE",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREP004",
+  "testName": "TEMPLATES_EXCEL_SINGLE_CSV_CreateATemplateWithDeliveryTypeAsCSV",
+  "testDescription": "CREATE A NEW TEMPLATE WITH THE NAME OF AN EXISTING TEMPLATE IN SAME SUBTENANT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES"
+      }
+    },
+    {
+      "name": "CREATE-RECORD"
+    },
+    {
+      "name": "POPULATE-FORM",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE TYPE",
+            "value": "EXCEL"
+          },
+          {
+            "variable": "PROCESS",
+            "value": "VENDOR"
+          },
+          {
+            "variable": "TEMPLATE NAME",
+            "value": "DOWNLOAD FILE"
+          },
+          {
+            "variable": "BURST MODE",
+            "value": "YES"
+          },
+          {
+            "variable": "DELIVERY FORMAT",
+            "value": "CSV & EXCEL"
+          }          
+        ]
+      }
+    },
+    {
+      "name": "SAVE-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+      	"action": "DUPLICATE",
+        "message": "DUPLICATE RECORD"
+      }      
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "testType": "FILE-UPLOAD",
+  "sector": "SETTINGS->FEEDS",
+  "module": "FILES",
+  "feature": "UPLOAD ATTACHMENTS",
+  "group": "FILES",
+  "category": "INTEGRATION",
+  "battery": "FILES",
+  "testId": "TCTEAMUPLOADINVALIDWEDJUN17",
+  "testName": "FILES_INBOUND_CSV_TryUploadingAFileWithInvalidDateFormatAsWedJune172020",  
+  "testDescription": "UPLOAD A NEW FILE WITH INVALID DATE FORMAT AS WED, JUNE 17,2020",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "FEEDS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "FILE NAME",
+            "text": "Team_102020_invalid date_DAYMONTHYEAR.csv"
+          },
+          {
+            "title": "PROCESS",
+            "text": "TEAM"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "PERFORM-RIGHTCLICK",
+      "context": {
+        "RowNumber": "1",
+        "Option": "CLONE"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "report": "true",
+      "context": {
+        "path": "testdata/Team_102020_invalid date_DAYMONTHYEAR.csv",
+        "name": "Team_102020_invalid date_DAYMONTHYEAR.csv"
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "DOWNLOAD-ATTACHMENTS",
+      "context": {
+        "fileToVerify": ["Team_102020_invalid date_DAYMONTHYEAR.csv"],
+        "isDownload": "no",
+        "fileToDownload": [""]
+      }
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+    	"name": "OPEN-FORM"
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "zone_name": "EDIT ZONE",
+        "column": [
+          {
+            "variable": "SAMPLE OUTCOME",
+            "expected": "PRE-PROCESSED (CHECK ERRORS)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

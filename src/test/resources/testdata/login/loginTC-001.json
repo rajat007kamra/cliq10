@@ -1,0 +1,24 @@
+{
+  "testType": "LOGIN",
+  "sector": "MEZOCLIQ",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN001",
+  "testName": "LOGIN_VALIDCREDENTIALS_CorrectUsernameAndPassword",
+  "testDescription": "CHECK WITH VALID CREDENTIALS",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

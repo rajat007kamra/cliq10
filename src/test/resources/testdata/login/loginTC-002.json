@@ -1,0 +1,24 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN002",
+  "testName": "LOGIN_VALIDCREDENTIALS_WhenUserHasAccessToSingleSubTenant",
+  "testDescription": "CHECK WHEN USER HAS ACCESS SINGLE SUBTENANT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

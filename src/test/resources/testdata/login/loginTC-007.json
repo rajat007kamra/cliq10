@@ -1,0 +1,22 @@
+{
+  "testType": "LOGIN",
+  "sector": "",
+  "module": "LOGIN",
+  "feature": "FORGOT PASSWORD",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN007",
+  "testName": "LOGIN_FORGOTPASSWORD_WithoutEnteringUsername",
+  "testDescription": "TRY FORGOT PASSWORD WITH BLANK USERNAME",
+  "note": "",
+  "actions": [
+    {
+      "name": "FORGOT-PASSWORD",
+      "context": {
+        "username": "",
+        "securityanswer": "PUPPET"
+        }
+    }
+  ]
+}

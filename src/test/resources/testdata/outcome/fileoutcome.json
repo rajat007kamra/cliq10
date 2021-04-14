@@ -1,0 +1,21 @@
+{
+    "summary": [
+      "SAMPLE OUTCOME",
+      "CLEANSING OUTCOME"
+    ],
+    "quicklist": [
+      {
+        "path": "FEED METRICS",
+        "flyout": [
+          "TOTAL TIME TO LOAD (SEC)",
+          "FILE-SIZE (KB)",
+          "TOTAL RECORDS",
+          "LOADED",
+          "ERROR",
+          "LOADED %",
+          "IGNORED"
+        ]
+      }
+    ]
+
+}

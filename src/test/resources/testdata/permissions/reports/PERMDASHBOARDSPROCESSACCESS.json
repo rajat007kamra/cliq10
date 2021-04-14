@@ -1,0 +1,33 @@
+{
+  "testType": "ASSIGN",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "ASSIGN PERMISSIONS",
+  "group": "TEST PERMISSIONS",
+  "category": "BASICS",
+  "battery": "PERMISSION",
+  "testId": "PERMDASHBOARDSPROCESSACCESS",
+  "testName": "PERMISSIONS_CheckDashboardsProcessAccessYes",
+  "testDescription": "CHECK ACCESS OF DASHBOARDS PROCESS TO USER",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ-.PERMISSIONS-01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "DASHBOARDS",
+        "access": "YES"
+        
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+"testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "LIST",
+  "testId": "TCCLIQUILISTDYNAMIQZ",
+  "testName": "UI_LIST_DYNAMIQZ",
+  "testDescription": "OPEN DYNAMIQZ DROP",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES"
+      }
+    },
+    {
+      "name": "CREATE-RECORD"
+    },
+    {
+      "name": "POPULATE-FORM",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE TYPE",
+            "value": "EXCEL"
+          },
+          {
+            "variable": "PROCESS",
+            "value": "VENDOR"
+          },
+          {
+            "variable": "TEMPLATE NAME",
+            "value": "BOTZ.DYNAMIQZ-HASHCODE"
+          },
+          {
+            "variable": "BURST MODE",
+            "value": "YES"
+            
+          },          
+          {
+            "variable": "DELIVERY FORMAT",
+            "value": "EXCEL"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "CLOSE-WIDGET"
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS"
+      }
+    },
+    {
+      "name": "PERFORM-REPORTFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "NAME",
+            "text": "BOTZ.DYNAMIQZ-HASHCODE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    } 
+  ]
+}

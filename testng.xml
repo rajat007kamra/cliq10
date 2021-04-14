@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Suite Demo">
+<listeners>
+    <listener class-name="testNG.utils.TestNGEmailableReport"/>
+  </listeners>
+  <test name="Test 1">
+  <parameter name="category" value="BASICS"/>
+    <parameter name="battery" value="LOGIN"/>
+    <parameter name="preserve-order" value="true"/>
+    <classes>
+      <class name="tests.ui.LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test 2">
+  <parameter name="category" value="BASICS"/>
+    <parameter name="battery" value="LOGIN"/>
+    <parameter name="preserve-order" value="true"/>
+    <classes>
+      <class name="tests.ui.LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

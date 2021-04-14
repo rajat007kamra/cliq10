@@ -1,0 +1,48 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "WIDGET",
+  "testId": "TCCLIQUIWIDGETMATCHER",
+  "testName": "UI_WIDGET_MATCHER",
+  "testDescription": "CHECK MATCHER WIDGET",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "RECONCILIATION"
+      }
+    },
+    {
+      "name": "MODIFY-ACCORDION",
+      "context": {
+        "accordion": "RIGHT",
+        "state": "EXPAND"
+      }
+    },
+    {
+      "name": "OPEN-FLYOUT",
+      "context": {
+        "flexname": "QUICKLIST",
+        "flyoutname": "MATCHER"
+      }
+    },
+    {
+      "name": "CLOSE-WIDGET"
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

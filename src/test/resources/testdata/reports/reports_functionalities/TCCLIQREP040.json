@@ -1,0 +1,147 @@
+{
+  "testType": "REPORT CREATION",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "NEW REPORT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQREP040",               
+   "testName": "REPORTS_TEMPLATENAMEFORRECORD_GenerateAdhocReport",
+  "testDescription": "CREATE ADHOC REPORTS WITH THE HELP OF DIFFERENT TEMPLATES",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS"
+      }
+    },
+    {
+      "name": "CREATE-RECORD"
+    },
+    {
+      "name": "POPULATE-FORM",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE",
+            "value": "BOTZ.TEMP-EXL-001"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SAVE-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SAVE",
+        "message": "SAVED!"
+      }
+    },
+    {
+      "name": "CLOSE-WIDGET"
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "REPORT",
+            "text": "BOTZ.TEMP-EXL-001"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "zone_name": "VIEW ZONE",
+        "column": [
+          {
+            "variable": "STATUS",
+            "expected": "PENDING"
+          }
+        ]
+      }
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "REFRESH",
+        "message": "REFRESHED!"
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "REFRESH",
+        "message": "REFRESHED!"
+      }
+    },
+    
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "ZONE_NAME": "VIEW ZONE",
+        "column":[
+        {
+          "variable": "STATUS",
+          "expected": "COMPLETED"
+        },
+        {
+          "variable": "METHOS",
+          "expected": "ADHOC"
+        }
+       ]
+      }
+    },
+    {
+      "name": "DOWNLOAD-ATTACHMENTS",
+      "context": {
+        "fileToVerify": ["BOTZ.TEMP-EXL-001.XLSX"],
+        "isDownload": "NO",
+        "fileToDownload": [""]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

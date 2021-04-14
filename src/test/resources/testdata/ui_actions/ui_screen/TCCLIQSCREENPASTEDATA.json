@@ -1,0 +1,37 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "SCREEN",
+  "testId": "TCCLIQSCREENPASTEDATA",
+  "testName": "UI_SCREEN_PASTEDATA",
+  "testDescription": "SAVE NEW ROW USING PASTE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES"
+      }
+    },
+    {
+      "name": "PASTE-DATA",
+      "context": {
+        "data": "ACTIVE"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

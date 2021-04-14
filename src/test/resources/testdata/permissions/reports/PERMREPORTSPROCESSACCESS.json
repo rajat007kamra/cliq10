@@ -1,0 +1,33 @@
+{
+  "testType": "ASSIGN",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "ASSIGN PERMISSIONS",
+  "group": "TEST PERMISSIONS",
+  "category": "BASICS",
+  "battery": "PERMISSION",
+  "testId": "PERMREPORTSPROCESSACCESS",
+  "testName": "PERMISSIONS_CheckReportsProcessAccessYes",
+  "testDescription": "CHECK ACCESS OF REPORTS PROCESS TO USER",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ-.PERMISSIONS-01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS",
+        "access": "YES"
+        
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

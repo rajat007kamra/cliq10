@@ -1,0 +1,66 @@
+{
+  "testType": "ASSIGN",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "ASSIGN PERMISSIONS",
+  "group": "TEST PERMISSIONS",
+  "category": "BASICS",
+  "battery": "PERMISSION",
+  "testId": "PERMLOCATIONSPROCESS",
+  "testName": "PERMISSIONS_CheckLocationsProcessEditAccess",
+  "testDescription": "CHECK EDIT ACCESS OF LOCATIONS PROCESS TO USER AND SELF RECORDS",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ-.PERMISSIONS-01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "LOCATIONS"
+      }
+    },
+    {
+      "name": "CHECK-RECORD",
+      "context": {
+      "records" : "SELF",
+        "column": [
+          {
+            "title": "AUTHOR",
+            "expected": "BOTZ-.PERMISSIONS-01"
+          }
+        ],
+        "checkrecord": "ALL"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "LOCATION",
+            "text": "001 DELHI"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "REVISE-RECORD",
+      "context": {
+        "access": "YES"
+      }
+    },    
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "suites": [
+    {
+		"suiteName": "REPORTS_ACTUALFILES",
+		"suiteDescription": "REPORTS ACTUAL FILES TEST SUITE",
+		"note": "REPORTS ACTUAL FILES",
+		
+	 	"testCases": [
+	    	"src/test/resources/testdata/reports/reports_actualfiles/ReportsJson.json"
+	  		]
+	}
+]
+}

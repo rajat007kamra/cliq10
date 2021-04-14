@@ -1,0 +1,28 @@
+{
+  "suites": [
+    {
+      "category": "UI",
+      "battery": "WIDGET",
+	  "suiteName": "UI_WIDGET",
+	  "suiteDescription": "WIDGET ACTIONS GENERIC UI TEST SUITE",
+	  "note": "GENERIC UI WIDGET",
+	  "testCases": [
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETVERTICALFLY.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETHORIZONTALFLY.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETCLARIFIER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETFORM.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETMAPPER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETMATCHER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETPLUS.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETSCHEDULER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETCHART.json", 		
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETSHARING.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETDIRECTORY.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETTRANSLATION.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETEQUATION.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETMERGE.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETATTACHMENT.json"
+	  ]
+	}
+]
+}

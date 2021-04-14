@@ -1,0 +1,31 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN016",
+  "testName": "LOGIN_SECURITYTESTING_BrowserNavigation",
+  "testDescription": "TRY LOGIN WITH BROWSER BACK BUTTON",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001",
+        "password":"Tubelight004$"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    },
+    {
+    "name":"BROWSER-NAVIGATION",
+    "context":{
+        "navigation":"Back"
+       }
+    }
+ ]
+}

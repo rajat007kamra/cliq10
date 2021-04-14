@@ -1,0 +1,73 @@
+pipeline {
+    agent {
+    	label "BOT-WIN"
+    }
+    environment {
+    	Browser = "${env.Browser}"
+    	AppUrl = "${env.AppUrl}"
+    	DirLocation = "${env.DirLocation}"
+    	TestSuite = "${env.TestSuite}"
+    	sendEmailTo = "${env.sendEmailTo}"
+    	version = "${env.Version}"
+    	module = "${env.Module}"
+    	subjectPrefix = "[QE]"
+    	subjectPostFix = "TEST RESULTS"
+    }
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building'
+            }
+        }
+         stage('Generate Tests') {
+            steps {
+                bat """
+					mvn clean install exec:java -DskipTests=true -DdirLocation=${env.DirLocation} -DtestSuite=${env.TestSuite} 
+                 """
+            }
+        }
+        stage('Execute Tests') {
+        
+          steps {
+   				
+       			bat """
+                	mvn clean install -DsuiteXmlFile=masterTestNg.xml -Dbrowser=${env.Browser} -DappUrl=${env.AppUrl} -Dmode=headless -DbuildNumber=${env.BUILD_NUMBER} -DbuildUrl=${env.BUILD_URL} -DsubjectLine="${module} ${subjectPostFix}"
+                """
+     				 
+ 			 }
+        }        
+    }
+      post {
+        always {
+           junit testResults: '**/target/surefire-reports/*.xml', allowEmptyResults: false
+           script {
+             allure([
+               includeProperties: false,
+               jdk: '',
+               properties: [],
+               reportBuildPolicy: 'ALWAYS',
+               results: [[path: 'target/allure-results']]
+           ])
+           if (fileExists('matrix.csv')) {
+   				emailext attachmentsPattern: 'matrix.csv', body: '''${FILE, path="target/surefire-reports/emailable-report.html"}''',
+        		mimeType: 'text/html',
+        		subject: "${subjectPrefix} ${version} - ${module} ${subjectPostFix}",
+        		to: "${sendEmailTo}",
+        		replyTo: "${sendEmailTo}",
+        		recipientProviders: [[$class: 'CulpritsRecipientProvider']]
+			} else {
+  			    emailext body: '''${FILE, path="target/surefire-reports/emailable-report.html"}''',
+        		mimeType: 'text/html',
+        		subject: "${subjectPrefix} ${version} - ${module} ${subjectPostFix}",
+        		to: "${sendEmailTo}",
+        		replyTo: "${sendEmailTo}",
+        		recipientProviders: [[$class: 'CulpritsRecipientProvider']]
+			}
+
+         }
+     }
+    }
+}

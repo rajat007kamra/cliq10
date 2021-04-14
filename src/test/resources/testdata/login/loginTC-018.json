@@ -1,0 +1,38 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN018",
+  "testName": "LOGIN_SECURITYTESTING_UserTriesLoginInDifferentTabWithInvalidCredentials",
+  "testDescription": "TRY USER LOGIN IN DIFFERENT TAB WITH INVALID CREDENTIALS",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "RAJAT.KAMRA$123",
+        "password":"Tubelight004$",
+        "expected_error": "LOGIN FAILED: CHECK USERNAME/PASSWORD"
+        
+      }
+    },
+    {
+    "name":"SWITCH-TAB",
+    "context":{
+        "switchtab":"CHILD"
+       }
+    },
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "RAJAT.KAMRA$123",
+        "password":"Tubelight9015$",
+        "expected_error": "LOGIN FAILED: CHECK USERNAME/PASSWORD"
+      }
+    }
+ ]
+}

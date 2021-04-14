@@ -1,0 +1,40 @@
+{
+  "testType": "REPORT CREATION",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "NEW REPORT",
+  "group": "TEST REPORT",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREP040",               
+   "testName": "REPORTS_TEMPLATENAMEFORRECORD_GenerateAdhocReport",
+  "testDescription": "CREATE ADHOC REPORTS WITH THE HELP OF DIFFERENT TEMPLATES",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS"
+      }
+    },
+	{
+      "name": "EXECUTE-REPORT",
+      "context": {
+        "template": "BOTZ.TEMP-EXL-001",
+        "selectTemplateRow": "1",
+        "run": "YES",
+        "button": "RUN"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "WIDGET",
+  "testId": "TCCLIQUIWIDGETSCHEDULER",
+  "testName": "UI_WIDGET_SCHEDULER",
+  "testDescription": "OPEN SCHEDULER WIDGET ON EXISTING ROW",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+   {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES",
+        "column": [
+          {
+            "title": "REPORT TEMPLATE",
+            "text": "BOTZ.ONE-TIME REPORT SCHEDULE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },    
+    {
+      "name": "MODIFY-ACCORDION",
+      "context": {
+        "accordion": "RIGHT",
+        "state": "EXPAND"
+      }
+    },
+    {
+      "name": "OPEN-FLYOUT",
+      "context": {
+        "flexname": "QUICKLIST",
+        "flyoutname": "REPORT SCHEDULER"
+      }
+    },
+    {
+      "name": "CLOSE-WIDGET"
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "suites": [
+    {
+      "category": "BASICS",
+      "battery": "PERMISSION",
+      "suiteName": "PERMISSIONS_AUDITCAPABILITIES",
+      "suiteDescription": "PROCESSES TEST SUITE",
+      "note": "AUDIT CAPABILITIES PERMISSIONS",
+      "testCases": [
+        "src/test/resources/testdata/permissions/auditcapabilities/PERMCHECKAUDITCAPABILITIES.json"
+      ]
+    }
+  ]
+}

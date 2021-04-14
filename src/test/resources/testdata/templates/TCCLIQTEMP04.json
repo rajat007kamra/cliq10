@@ -1,0 +1,71 @@
+{
+  "testType": "CREATE",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "CREATE TEMPLATE",
+  "group": "TEST TEMPLATE",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQTEMP04",
+  "testName": "TEMPLATES_EXCEL_SINGLE_CSV_CreateCSVDeliveryType",
+  "testDescription": "CREATE A TEMPLATE WITH DELIVERY TYPES AS CSV",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES"
+      }
+    },
+    {
+      "name": "CREATE-RECORD"
+    },
+    {
+      "name": "POPULATE-FORM",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE TYPE",
+            "value": "EXCEL"
+          },
+          {
+            "variable": "PROCESS",
+            "value": "ANNOUNCEMENT"
+          },
+          {
+            "variable": "TEMPLATE NAME",
+            "value": "TEMPLATE CSV-HASHCODE"
+          },
+          {
+            "variable": "BURST MODE",
+            "value": "NO"
+          },
+          {
+            "variable": "DELIVERY FORMAT",
+            "value": "CSV"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SAVE-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SAVE",
+        "message": "SAVED!"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "testType": "FILE-UPLOAD",
+  "sector": "ADMIN->FEEDS",
+  "module": "FILES",
+  "feature": "UPLOAD ATTACHMENTS",
+  "group": "FILES",
+  "category": "INTEGRATION",
+  "battery": "FILES",
+  "testId": "TCTEAMUPLOADJPGPNGWORDFILE",
+  "testName": "FILES_INBOUND_CSV_TryUploadingAFileWithUnSupportedFormatJpgPngWordJpeg",
+  "testDescription": "FILES_INBOUND_CSV_UploadFileWithInvalidFormat",
+  "testObjectives": "UPLOAD A NEW FILE WITH NON SUPPORTED FORMAT LIKE JPG,PNG,WORD,JPEG",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "FEEDS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "FEED",
+            "text": "DEMO TEAM TEAM"
+          },
+          {
+            "title": "PROCESS",
+            "text": "TEAM"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "PERFORM-RIGHTCLICK",
+      "context": {
+        "RowNumber": "1",
+        "Option": "CLONE"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "report": "true",
+      "context": {
+        "path": "testdata/TCCLIQINTEG046.jpg",
+        "name": "TCCLIQINTEG046.jpg",
+        "expected_error": "INVALID FORMAT"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "context": {
+        "path": "testdata/TCCLIQINTEG046.jpeg",
+        "name": "TCCLIQINTEG046.jpeg",
+        "expected_error": "INVALID FORMAT"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "context": {
+        "path": "testdata/TCCLIQINTEG046.png",
+        "name": "TCCLIQINTEG046.png",
+        "expected_error": "INVALID FORMAT"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "context": {
+        "path": "testdata/TCCLIQINTEG046.doc",
+        "name": "TCCLIQINTEG046.doc",
+        "expected_error": "INVALID FORMAT"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

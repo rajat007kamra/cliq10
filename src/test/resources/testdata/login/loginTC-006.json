@@ -1,0 +1,22 @@
+{
+  "testType": "LOGIN",
+  "sector": "",
+  "module": "LOGIN",
+  "feature": "FORGOT PASSWORD",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN006",
+  "testName": "LOGIN_FORGOTPASSWORD_EnteringWrongSecurityAnswer",
+  "testDescription": "TRY FORGOT PASSWORD WITH WRONG SECURITY ANSWER",
+  "note": "",
+  "actions": [
+    {
+      "name": "FORGOT-PASSWORD",
+      "context": {
+        "username": "RAJAT.API",
+        "securityanswer": "PUPPET"      
+        }
+    }
+  ]
+}

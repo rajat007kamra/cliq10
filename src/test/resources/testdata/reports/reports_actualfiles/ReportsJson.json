@@ -1,0 +1,76 @@
+{
+  "testType": "REPORT CREATION",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "NEW REPORT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQREPXLSX01",
+  "testName": "REPORT AFTER UI CHANGE",
+  "testDescription": "CREATE EXCEL ONETIME XLSX STANDARD SECURITY SUMMARY REPORT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS"
+      }
+    },
+    {
+      "name": "EXECUTE-REPORT",
+      "context": {
+        "template": "STANDARD ACCOUNT CHANGE",
+        "selectTemplateRow": "1",
+        "run": "YES",
+        "parameters": [
+          {
+            "name": "AS-OF DATE",
+            "value": "11/11/2020"
+          },
+          {
+            "name": "START DATE",
+            "value": "11/11/2021"
+          },
+          {
+            "name": "END DATE",
+            "value": "11/11/2022"
+          }
+        ],
+        
+        "users": [
+          {
+            "name": "ARUN.KAPOOR",
+            "inApp": "NO",
+            "email": "YES"
+          },
+          {
+            "name": "RAJAT.KAMRA",
+            "inApp": "YES",
+            "email": "NO"
+          }
+		],
+		
+		"email": ["arun.kapoor@mezocliq.com"],
+		"ftp": ["ALFA STEEL", "CORE AGENT"],
+		
+		"reports": [
+          {
+            "title": "STATUS",
+            "text": "GENERATED"
+          }
+		],
+		"selectReportRow": "1",
+		"reportIcon": "INFORMATION"
+		}
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

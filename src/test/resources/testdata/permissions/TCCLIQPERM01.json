@@ -1,0 +1,73 @@
+{
+  "testType": "ASSIGN",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "ASSIGN PERMISSIONS",
+  "group": "TEST PERMISSIONS",
+  "testId": "TCCLIQPERM01",
+  "testName": "PERMISSIONS_SelectTeamAndAssignPermissions",
+  "testDescription": "SELECT EXISTING TEAM AND ASSIGN PERMISSION TO SAME",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "PERMISSIONS",
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "PERMISSION",
+            "text": "MEZOCLIQ EMPLOYEE BOTZ.AUTO0001"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "MODIFY-ACCORDION",
+      "context": {
+        "accordion": "RIGHT",
+        "state": "EXPAND"
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "OPEN-FLYOUT",
+      "context": {
+        "flexname": "SUMMARY"
+      }
+    },
+    {
+      "name": "POPULATE-VERTICALFLYOUT",
+      "context": {
+        "flexname": "SUMMARY",
+        "column": [
+          {
+            "variable": "FORMS",
+            "value": "YES"
+          },
+          {
+            "variable": "SETTINGS",
+            "value": "yes"
+          },
+          {
+            "variable": "REPORTS",
+            "value": "YES"
+          }
+        ]
+      }
+    }
+  ]
+}

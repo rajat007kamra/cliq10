@@ -1,0 +1,47 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "FIND",
+  "testId": "TCCLIQUIFINDFILTER",
+  "testName": "UI_FIND_FILTER",
+  "testDescription": "FILTER COLUMN ON VIEWZONE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "REPORT TEMPLATE",
+            "text": "TEMP AGENT"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

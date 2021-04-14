@@ -1,0 +1,77 @@
+{
+  "testType": "ASSIGN",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "ASSIGN PERMISSIONS",
+  "group": "TEST PERMISSIONS",
+  "testId": "PERMSUBTENANTPROCESSACCESS",
+  "testName": "PERMISSIONS_CheckSubtenantsProcessReadOnlyAccess",
+  "testDescription": "CHECK READ ONLY ACCESS OF SUBTENANT PROCESS TO USER  AND SELF CREATED RECORDS",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ-.PERMISSIONS-01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "SUBTENANTS"
+      }
+    },
+    {
+      "name": "CREATE-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "REVISE-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "SAVE-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "WITHDRAW-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "APPROVE-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "DENY-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "CHECK-RECORD",
+      "context": {
+      "records" : "SELF"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

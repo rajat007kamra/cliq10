@@ -1,0 +1,54 @@
+{
+  "testType": "APPROVERS",
+  "sector": "MEZOCLIQ",
+  "module": "APPROVERS",
+  "feature": "APPROVERS",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "APPROVERS",
+  "testId": "TCCLIQAPPROVERS001",
+  "testName": "APPROVERS_RULE_CONFIGRATION_FOR_VETO_FOR_APPROVAL",
+  "testDescription": "APPROVAL_RULE_CREATION_AND_ASSIGNED_TO_VETO_FOR_APPROVE",
+  "testObjectives": "Approvers",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "RAJAT.KAMRA"
+      }
+    },
+        {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "DEPARTMENTS"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ONBOARDING"
+          },
+          {
+            "title": "DEPARTMENT",
+            "text": "VETO TEST APPROVERS"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "APPROVE-RECORD",
+      "context": {
+      "access": "YES"
+       }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

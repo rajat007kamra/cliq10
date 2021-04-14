@@ -1,0 +1,34 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "SCREEN",
+  "testId": "TCCLIQSCREENINTEGRATEDVIEW",
+  "testName": "UI_SCREEN_INTEGRATEDVIEW",
+  "testDescription": "VIEW IV ON EXISTING ROW",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "TEAMS"
+      }
+    },
+    {
+      "name": "OPEN-INTEGRATEDVIEW"
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

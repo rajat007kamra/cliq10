@@ -1,0 +1,142 @@
+{
+  "testType": "CREATE",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "CREATE REPORT SCHEDULE",
+  "group": "TEST TEMPLATE",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREPSCH02",
+  "testName": "REPORTS_TEMPLATENAMEFORRECORD_MonthlyUsingReportScheduler",
+  "testDescription": "CREATE A TEMPLATE TO GENERATE MONTHLY REPORT USING REPORT SCHEDULER",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES",
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "REPORT TEMPLATE",
+            "text": "BOTZ.MONTHLY REPORT SCHEDULE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "MODIFY-ACCORDION",
+      "context": {
+        "accordion": "RIGHT",
+        "state": "EXPAND"
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "OPEN-FLYOUT",
+      "context": {
+        "flexname": "QUICKLIST",
+        "flyoutname": "REPORT SCHEDULER"
+      }
+    },
+    {
+      "name": "POPULATE-VERTICALFLYOUT",
+      "context": {
+        "flexname": "QUICKLIST",
+        "column": [
+          {
+            "variable": "FREQUENCY",
+            "value": "MONTHLY"
+          },
+          {
+            "variable": "START-DATE",
+            "value": "12/01/2020"
+          },
+          {
+            "variable": "END-OF-MONTH",
+            "value": "NO"
+          },
+          {
+            "variable": "END-DATE",
+            "value": "01/01/2021"
+          },
+          {
+            "variable": "HOURS",
+            "value": "1"
+          },
+          {
+            "variable": "MINUTES",
+            "value": "45"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "CLOSE-WIDGET"
+    },
+    {
+      "name": "OPEN-FLYOUT",
+      "context": {
+        "flexname": "QUICKLIST",
+        "flyoutname": "REPORT SCHEDULE"
+      }
+    },
+    {
+      "name": "CHECK-FLYOUTROWCOUNT",
+      "context": {
+        "count": "1"
+      }
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "zone_name": "FLY ZONE",
+        "selectRow": "1",
+        "column": [
+          {
+            "variable": "PERIOD",
+            "expected": "2021-01-01"
+          },
+          {
+            "variable": "START",
+            "expected": "12/01/2020"
+          },
+          {
+            "variable": "END",
+            "expected": "01/01/2021"
+          },
+          {
+            "variable": "GENERATION",
+            "expected": "01/01/2021 01:45:00"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

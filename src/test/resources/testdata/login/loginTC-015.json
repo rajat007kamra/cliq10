@@ -1,0 +1,47 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN015",
+  "testName": "LOGIN_SECURITYTESTING_LoginInOtherBrowserTabWithSameUser",
+  "testDescription": "CHECK LOGIN IN OTHER TAB WITH SAME USER CREDENTIALS IN SAME BROWSER",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001",
+        "password":"Tubelight004$"
+      }
+    },
+    {
+    "name":"SWITCH-TAB",
+    "context":{
+        "switchtab":"CHILD"
+       }
+    },
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001",
+        "password":"Tubelight004$"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    },
+    {
+    "name":"SWITCH-TAB",
+    "context":{
+        "switchtab":"PARENT"
+       }
+    },
+    {
+      "name": "LOGOUT"
+    }
+ ]
+}

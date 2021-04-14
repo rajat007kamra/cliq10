@@ -1,0 +1,21 @@
+{
+  "suites": [
+    {
+      "category": "INTEGRATION",
+      "battery": "FILES",
+      "suiteName": "FILES_FUNCTIONALITIES",
+      "suiteDescription": "Feeds File Upload Test Suite",
+      "note": "FILES FUNCTIONALITIES",
+      "testCases": [
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADNEW.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADINVALIDDDMMYYYY.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADINVALIDWEDJUN17.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADJPGPNGWORDFILE.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADBLANKFILE.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADNONEXISTENTITY.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADSUBTENANTABC.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADDIFFERENTSUBTENANT.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "BUTTON",
+  "testId": "TCCLIQBUTTONDELETE",
+  "testName": "UI_BUTTON_DELETE",
+  "testDescription": "DELETE EXISTING ROW",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES",
+        "column": [
+          {
+            "title": "REPORT TEMPLATE",
+            "text": "TEST AUDIT TEMPLATE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "PERFORM-RIGHTCLICK",
+      "context": {
+        "RowNumber": "1",
+        "Option": "CLONE"
+      }
+    },
+    {
+      "name": "DELETE-RECORD"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

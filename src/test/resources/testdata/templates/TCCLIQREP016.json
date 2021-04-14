@@ -1,0 +1,92 @@
+{
+  "testType": "SHARE",
+  "sector": "SE2",
+  "module": "TEMPLATE",
+  "feature": "SHARE EXISTING TEMPLATE",
+  "group": "TEST TEMPLATE",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREP016",
+  "testName": "TEMPLATES_EXCEL_SINGLE_EXCEL_ShareTemplateToUser",
+  "testDescription": "SHARE THE TEMPLATE WITH ANOTHER USER",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES",
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "REPORT TEMPLATE",
+            "text": "BOTZ.CHECK EMAIL COUNT"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "MODIFY-ACCORDION",
+      "context": {
+        "accordion": "RIGHT",
+        "state": "EXPAND"
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "OPEN-FLYOUT",
+      "context": {
+        "flexname": "WORKFLOW",
+        "flyoutname": "SHARING"
+      }
+    },
+    {
+      "name": "POPULATE-HORIZONTALSHARING",
+      "context": {
+      "column": [
+          {
+            "user": "RAJAT.KAMRA",
+        	"rights": "VIEW"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "zone_name": "VIEW ZONE",
+        "column": [
+          {
+            "variable": "STATE",
+            "expected": "ACTIVE"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

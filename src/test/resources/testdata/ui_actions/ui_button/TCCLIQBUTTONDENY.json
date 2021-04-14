@@ -1,0 +1,44 @@
+ {
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "BUTTON",
+  "testId": "TCCLIQBUTTONDENY",
+  "testName": "UI_BUTTON_DENY",
+  "testDescription": "DENY ROW PENDING APPROVAL",  
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "DEPARTMENTS",
+        "column": [
+          {
+            "title": "DEPARTMENT",
+            "text": "ARUN TEST 2"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "DENY-RECORD",
+      "context": {
+      "access": "YES"
+       }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

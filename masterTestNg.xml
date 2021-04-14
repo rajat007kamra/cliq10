@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite Of Suites">
+  <suite-files>
+    <suite-file path="GENERICUI-BUTTONTESTCASEStestNg.xml"/>
+    <suite-file path="GENERICUI-LISTTESTCASEStestNg.xml"/>
+    <suite-file path="GENERICUI-SCREENTESTCASEStestNg.xml"/>
+    <suite-file path="GENERICUI-FINDTESTCASEStestNg.xml"/>
+    <suite-file path="GENERICUI-WIDGETTESTCASEStestNg.xml"/>
+  </suite-files>
+</suite> <!-- Suite Of Suites -->

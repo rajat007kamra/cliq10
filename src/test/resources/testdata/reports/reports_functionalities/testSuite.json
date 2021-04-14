@@ -1,0 +1,27 @@
+{
+  "suites": [
+    {
+        "category": "REPORTING",
+        "battery": "REPORTS",
+		"suiteName": "REPORTS_FUNCTIONALITIES",
+		"suiteDescription": "REPORTS FUNCTIONALITIES TEST SUITE",
+		"note": "REPORTS FUNCTIONALITIES",
+		"testCases": [		
+			"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH01.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH02.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH03.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH04.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH05.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH06.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH07.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH08.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/EmailShareAdhocInternally.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/GenerateAdhocReport.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/InAppShareWithInternalUser.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/ShareAdhocExternally.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/ShareUsingFTP.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/CheckInformationInFormView.json"
+  		]
+	}
+]
+}

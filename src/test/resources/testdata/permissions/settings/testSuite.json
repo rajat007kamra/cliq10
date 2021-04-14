@@ -1,0 +1,14 @@
+{
+  "suites": [
+    {
+      "category": "BASICS",
+      "battery": "PERMISSION",
+      "suiteName": "PERMISSIONS_SETTINGS",
+      "suiteDescription": "SETTINGS TEST SUITE",
+      "note": "SETTINGS PERMISSIONS",
+      "testCases": [
+        "src/test/resources/testdata/permissions/settings/PERMSUBTENANTPROCESSACCESS.json"
+      ]
+    }
+  ]
+}

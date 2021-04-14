@@ -1,0 +1,34 @@
+{
+  "suites": [
+    {
+      "category": "REPORTING",
+      "battery": "REPORTS",
+      "suiteName": "REPORTS - TEMPLATE TESTCASES",
+      "suiteDescription": "REPORTS TEMPLATES TEST SUITE",
+      "note": "REPORTS TEMPLATES TEST CASES",
+      "testCases": [
+        "src/test/resources/testdata/templates/TCCLIQREP003.json",
+        "src/test/resources/testdata/templates/TCCLIQREP004.json",
+        "src/test/resources/testdata/templates/TCCLIQREP005.json",
+        "src/test/resources/testdata/templates/TCCLIQREP007.json",
+        "src/test/resources/testdata/templates/TCCLIQREP012.json",
+        "src/test/resources/testdata/templates/TCCLIQREP016.json",
+        "src/test/resources/testdata/templates/TCCLIQREP021.json",
+        "src/test/resources/testdata/templates/TCCLIQREP023.json",
+        "src/test/resources/testdata/templates/TCCLIQREP039.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP01.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP02.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP03.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP04.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP05.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP06.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP07.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP08.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP09.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP10.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP11.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP12.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "testType": "SHARE",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "SHARE EXISTING REPORT",
+  "group": "TEST REPORT",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREP048",
+  "testName": "REPORTS_TEMPLATENAMEFORRECORD_ShareUsingFTP",
+  "testDescription": "SHARE THE EXISTING ADHOC REPORTS USING FTP",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS"
+      }
+    },
+    {
+      "name": "EXECUTE-REPORT",
+      "context": {
+        "template": "BOTZ.SHARE FTP",
+        "selectTemplateRow": "1",
+        "run": "YES",
+        "ftps": ["BOTZ.SHARE FTP"],
+		"button": "RUN & SHARE"
+		}
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

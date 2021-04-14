@@ -1,0 +1,23 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN004",
+  "testName": "LOGIN_INVALIDCREDENTIALS_WhenUsernameIsIncorrect",
+  "testDescription": "TRY INCORRECT USERNAME",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.ghujh",
+        "password": "abc",
+        "expected_error": "LOGIN FAILED: CHECK USERNAME/PASSWORD"
+      }
+    }
+  ]
+}

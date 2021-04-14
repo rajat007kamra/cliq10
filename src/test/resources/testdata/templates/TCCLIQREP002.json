@@ -1,0 +1,126 @@
+{
+  "testType": "CREATE AND CHECK STATUS",
+  "sector": "SE2",
+  "module": "TEMPLATE",
+  "feature": "CREATE TEMPLATE",
+  "group": "TEST TEMPLATE",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREP002",
+  "testName": "TEMPLATES_REPORT_WRITER_CreateATemplateWithSpecialCharactersInTemplateName",
+  "testDescription": "CREATE A NEW TEMPLATE USING TEMPLATE TYPE REPORT WRITER",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES"
+      }
+    },
+    {
+      "name": "CREATE-RECORD"
+    },
+    {
+      "name": "POPULATE-FORM",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE TYPE",
+            "value": "REPORT WRITER"
+            
+          },
+          {
+            "variable": "PROCESS",
+            "value": "VENDOR"
+          },
+          {
+            "variable": "TEMPLATE NAME",
+            "value": "CHECK&TEMPLATE STATUS-HASHCODE"            
+          },
+          {
+            "variable": "BURST MODE",
+            "value": "YES"
+          },
+          {
+            "variable": "DELIVERY FORMAT",
+            "value": "EXCEL"            
+          }
+        ]
+      }
+    },
+    {
+      "name": "SAVE-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SAVE",
+        "message": "SAVED!"
+      }
+    },
+    {
+      "name": "CLOSE-WIDGET"
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "REFRESH",
+        "message": "REFRESHED!"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "REPORT TEMPLATE",
+            "text": "CHECK TEMPLATE STATUS-HASHCODE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "DOWNLOAD-ATTACHMENTS",
+      "context": {
+        "isDownload": "YES",
+        "fileToDownload": ["CHECK TEMPLATE STATUS-HASHCODE.XLSX"]
+      }
+    },    
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "zone_name": "VIEW ZONE",
+        "column": [
+          {
+            "variable": "STATE",
+            "expected": "ACTIVE"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

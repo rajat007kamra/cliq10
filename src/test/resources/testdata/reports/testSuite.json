@@ -1,0 +1,74 @@
+{
+  "suites": [
+    {
+      "category": "REPORTING",
+      "battery": "REPORTS",
+      "suiteName": "REPORTS - STANDARD REPORTS TESTCASES",
+      "suiteDescription": "REPORTS ACTUAL FILES TEST SUITE",
+      "note": "REPORTS ACTUAL FILES",
+      "testCases": [
+        "src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX01.json",
+        "src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX02.json",
+        "src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX03.json",
+        "src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX04.json",
+        "src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX05.json",
+        "src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX06.json",
+        "src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX07.json",
+        "src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX08.json"
+      ]
+    },
+    {
+      "category": "REPORTING",
+      "battery": "REPORTS",
+      "suiteName": "REPORTS - OTHER TESTCASES",
+      "suiteDescription": "REPORTS FUNCTIONALITIES TEST SUITE",
+      "note": "REPORTS FUNCTIONALITIES",
+      "testCases": [
+        "src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH01.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH02.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH03.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH04.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH05.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH06.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH07.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/TCCLIQREPSCH08.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/EmailShareAdhocInternally.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/GenerateAdhocReport.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/InAppShareWithInternalUser.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/ShareAdhocExternally.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/ShareUsingFTP.json",
+	    	"src/test/resources/testdata/reports/reports_functionalities/CheckInformationInFormView.json"
+      ]
+    },
+    {
+      "category": "REPORTING",
+      "battery": "REPORTS",
+      "suiteName": "REPORTS - TEMPLATE TESTCASES",
+      "suiteDescription": "REPORTS TEMPLATES TEST SUITE",
+      "note": "REPORTS TEMPLATES TEST CASES",
+      "testCases": [
+        "src/test/resources/testdata/templates/TCCLIQREP003.json",
+        "src/test/resources/testdata/templates/TCCLIQREP004.json",
+        "src/test/resources/testdata/templates/TCCLIQREP005.json",
+        "src/test/resources/testdata/templates/TCCLIQREP007.json",
+        "src/test/resources/testdata/templates/TCCLIQREP012.json",
+        "src/test/resources/testdata/templates/TCCLIQREP016.json",
+        "src/test/resources/testdata/templates/TCCLIQREP021.json",
+        "src/test/resources/testdata/templates/TCCLIQREP023.json",
+        "src/test/resources/testdata/templates/TCCLIQREP039.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP01.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP02.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP03.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP04.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP05.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP06.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP07.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP08.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP09.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP10.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP11.json",
+        "src/test/resources/testdata/templates/TCCLIQTEMP12.json"
+      ]
+    }
+  ]
+}

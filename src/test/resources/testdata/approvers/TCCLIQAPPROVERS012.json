@@ -1,0 +1,98 @@
+{
+  "testType": "APPROVERS",
+  "sector": "MEZOCLIQ",
+  "module": "APPROVERS",
+  "feature": "APPROVERS",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "APPROVERS",
+  "testId": "TCCLIQAPPROVERS012",
+  "testName": "APPROVERS_RULE_CONFIGURATION_FOR_ALL_STAGES_OF_REVISION_FOR_APPROVAL",
+  "testDescription": "RULE_CHECK_FOR_APPROVE",
+  "testObjectives": "Approvers",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "RAJAT.KAMRA"
+      }
+    },
+        {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "TEAMS"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "text": "REVISING"
+          },
+          {
+            "title": "TEAM",
+            "text": "AUTOMATION REVISE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "APPROVE-RECORD",
+      "context": {
+      "access": "NO"
+       }
+    },
+    {
+      "name": "LOGOUT"
+    },
+    {
+    "name":"SWITCH-TAB",
+    "context":{
+        "switchtab":"CHILD"
+       }
+    },
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "GURKIRAT.SINGH"
+      }
+    },
+        {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "TEAMS"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "text": "REVISING"
+          },
+          {
+            "title": "TEAM",
+            "text": "AUTOMATION REVISE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "APPROVE-RECORD",
+      "context": {
+      "access": "YES"
+       }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

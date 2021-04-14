@@ -1,0 +1,51 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "SCREEN",
+  "testId": "TCCLIQSCREENSOURCE",
+  "testName": "UI_SCREEN_SOURCE",
+  "testDescription": "VIEW SOURCE HISTORY FOR VARIABLE ON EXISTING ROW",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "SECURITIES",
+        "column": [
+          {
+            "title": "SECURITY",
+            "text": "NASSAU 2019 CFO LLC"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "MODIFY-ACCORDION",
+      "context": {
+        "accordion": "RIGHT",
+        "state": "EXPAND"
+      }
+    },
+    {
+      "name": "OPEN-SOURCEHISTORY"
+    },
+    {
+      "name": "CLOSE-WIDGET"
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

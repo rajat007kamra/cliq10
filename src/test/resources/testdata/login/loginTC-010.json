@@ -1,0 +1,23 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN010",
+  "testName": "LOGIN_LOCKEDACCOUNT_TryLoginWithAnLockedAccount",
+  "testDescription": "TRY LOGIN WITH LOCKED ACCOUNT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "RAJAT.API",
+        "password":"Tubelight90",
+        "expected_error":"LOGIN FAILED: CHECK YOUR EMAIL"
+      }
+    }
+ ]
+}

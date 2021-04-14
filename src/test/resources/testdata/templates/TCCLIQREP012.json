@@ -1,0 +1,54 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "TEMPLATE",
+  "feature": "VERFIY EMAIL COUNT",
+  "group": "TEST TEMPLATE",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREP012",
+  "testName": "TEMPLATES_EXCEL_SINGLE_EXCEL_CheckEmailCount",
+  "testDescription": "MAKE SURE TO HAVE THE EMAIL COUNTS FOR ALL THE TEMPLATES",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES",
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "REPORT TEMPLATE",
+            "text": "TEST-051119-1"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "zone_name": "VIEW ZONE",
+        "column": [
+          {
+            "variable": "EMAIL COUNT",
+            "expected": "5"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

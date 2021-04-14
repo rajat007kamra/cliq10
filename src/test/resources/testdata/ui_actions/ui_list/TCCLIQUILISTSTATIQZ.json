@@ -1,0 +1,80 @@
+{
+"testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "LIST",
+  "testId": "TCCLIQUILISTSTATIQZ",
+  "testName": "UI_LIST_STATIQZ",
+  "testDescription": "OPEN STATIC DROP",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "LOCATIONS",
+        "column": [
+          {
+            "title": "LOCATION",
+            "text": "1600 1500 WL"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "MODIFY-ACCORDION",
+      "context": {
+        "accordion": "RIGHT",
+        "state": "EXPAND"
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "OPEN-FLYOUT",
+      "context": {
+        "flexname": "QUICKLIST",
+        "flyoutname": "LOCATION ADDRESS"
+      }
+    },
+    {
+      "name": "CHECK-FLYZONELIST",
+      "context": {
+        "listtype": "HORIZONTAL",
+        "column": [
+          {
+            "listname": "COUNTRY",
+            "listvalue": "JP-Japan"            
+          },
+          {
+            "listname": "STATE",
+            "listvalue": "TOKYO"            
+          }
+        ]
+      }
+    },
+    {
+      "name": "DISCARD-RECORD"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

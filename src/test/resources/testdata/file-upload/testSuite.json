@@ -1,0 +1,40 @@
+{
+  "suites": [
+    {
+      "category": "INTEGRATION",
+      "battery": "FILES",
+      "suiteName": "FILE_ACTUALFILES",
+      "suiteDescription": "Feeds File Upload Test Suite",
+      "note": "FILE ACTUALFILES",
+      "testCases": [
+        "src/test/resources/testdata/file-upload/files_actualfiles/BLOOMBERGRATE.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/BLOOMBERGSECURITY.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/DEMOTEAM.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/DEMONONFIXEDINCOME.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/IDCPRICES.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/MOODYRATINGS.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/ODSACCOUNT.json",        
+        "src/test/resources/testdata/file-upload/files_actualfiles/TAXPORTCONTRACTAFFILIATE.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/WORKDAYEMPLOYEE.json",
+        "src/test/resources/testdata/file-upload/files_actualfiles/XECURRENCY.json"
+        ]
+    },
+    {
+      "category": "INTEGRATION",
+      "battery": "FILES",
+      "suiteName": "FILES_FUNCTIONALITIES",
+      "suiteDescription": "Feeds File Upload Test Suite",
+      "note": "FILES FUNCTIONALITIES",
+      "testCases": [
+         "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADNEW.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADINVALIDDDMMYYYY.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADINVALIDWEDJUN17.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADJPGPNGWORDFILE.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADBLANKFILE.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADNONEXISTENTITY.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADSUBTENANTABC.json",
+        "src/test/resources/testdata/file-upload/files_functionalities/TCTEAMUPLOADDIFFERENTSUBTENANT.json"
+      ]
+    }
+  ]
+}

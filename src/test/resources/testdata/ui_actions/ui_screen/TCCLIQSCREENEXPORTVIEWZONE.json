@@ -1,0 +1,37 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "SCREEN",
+  "testId": "TCCLIQSCREENEXPORTVIEWZONE",
+  "testName": "UI_SCREEN_EXPORTVIEWZONE",
+  "testDescription": "EXPORT VIEWZONE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES"
+      }
+    },
+    {
+      "name": "EXPORT-VIEWZONE",
+      "context": {
+        "expected": "EXPORTED!"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

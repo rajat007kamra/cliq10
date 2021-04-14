@@ -1,0 +1,71 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "BUTTON",
+  "testId": "TCCLIQBUTTONSAVE",
+  "testName": "UI_BUTTON_SAVE",
+  "testDescription": "SAVE NEW ROW",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES"
+      }
+    },
+    {
+      "name": "CREATE-RECORD"
+    },
+    {
+      "name": "POPULATE-FORM",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE TYPE",
+            "value": "EXCEL"
+          },
+          {
+            "variable": "PROCESS",
+            "value": "VENDOR"
+          },
+          {
+            "variable": "TEMPLATE NAME",
+            "value": "BOTZ.SAVE RECORD-HASHCODE"
+          },
+          {
+            "variable": "BURST MODE",
+            "value": "NO"
+          },
+          {
+            "variable": "DELIVERY FORMAT",
+            "value": "EXCEL"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SAVE-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SAVE",
+        "message": "SAVED!"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

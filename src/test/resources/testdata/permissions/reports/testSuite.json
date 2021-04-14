@@ -1,0 +1,15 @@
+{
+  "suites": [
+    {
+      "category": "BASICS",
+      "battery": "PERMISSION",
+      "suiteName": "PERMISSIONS_REPORTS",
+      "suiteDescription": "REPORTS TEST SUITE",
+      "note": "REPORTS PERMISSIONS",
+      "testCases": [
+        "src/test/resources/testdata/permissions/reports/PERMDASHBOARDSPROCESSACCESS.json",
+        "src/test/resources/testdata/permissions/reports/PERMREPORTSPROCESSACCESS.json"
+      ]
+    }
+  ]
+}

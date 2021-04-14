@@ -1,0 +1,59 @@
+{
+  "testType": "ASSIGN",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "ASSIGN PERMISSIONS",
+  "group": "TEST PERMISSIONS",
+  "category": "BASICS",
+  "battery": "PERMISSION",
+  "testId": "PERMENTITYAFFILIATESPROCESS",
+  "testName": "PERMISSIONS_CheckEntityAffiliatesProcessEditAccess",
+  "testDescription": "CHECK EDIT ACCESS OF ENTITY AFFILIATES PROCESS TO USER AND RESTRICTED RECORDS",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ-.PERMISSIONS-01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "ENTITY AFFILIATES"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "AFFILIATE",
+            "text": "SHOWTIME LLC"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "REVISE-RECORD",
+      "context": {
+        "access": "YES"
+      }
+    },
+    {
+      "name": "CHECK-RECORD",
+      "context": {
+      "records" : "RESTRICTED"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

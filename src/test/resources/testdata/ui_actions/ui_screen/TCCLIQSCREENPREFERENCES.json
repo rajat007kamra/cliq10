@@ -1,0 +1,37 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "SCREEN",
+  "testId": "TCCLIQPADPREFERENCES",
+  "testName": "UI_SCREEN_PREFERENCES",
+  "testDescription": "OPEN PREFERENCES WIDGET",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "PRIVILEGES"
+      }
+    },
+    {
+      "name": "OPEN-PREFERENCES",
+      "context": {
+        "preference": "reset settings"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

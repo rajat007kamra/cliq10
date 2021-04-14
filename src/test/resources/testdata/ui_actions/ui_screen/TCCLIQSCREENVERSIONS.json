@@ -1,0 +1,54 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "SCREEN",
+  "testId": "TCCLIQSCREENVERSIONS",
+  "testName": "UI_SCREEN_VERSIONS",
+  "testDescription": "VIEW VERSION HISTORY FOR EXISTING ROW",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "SECURITIES",
+        "column": [
+          {
+            "title": "SECURITY",
+            "text": "NASSAU 2019 CFO LLC"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "MODIFY-ACCORDION",
+      "context": {
+        "accordion": "RIGHT",
+        "state": "EXPAND"
+      }
+    },
+    {
+      "name": "OPEN-VERSIONHISTORY",
+      "context": {
+        "displayHistory": "NO"
+      }
+    },
+    {
+      "name": "CLOSE-WIDGET"
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

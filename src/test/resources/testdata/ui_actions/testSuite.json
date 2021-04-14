@@ -1,0 +1,93 @@
+{
+  "suites": [
+    {
+      "category": "UI",
+      "battery": "WIDGET",
+      "suiteName": "GENERIC UI - WIDGET TESTCASES",
+      "suiteDescription": "WIDGET ACTIONS GENERIC UI TEST SUITE",
+      "note": "GENERIC UI WIDGET",
+      "testCases": [
+	        "src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETVERTICALFLY.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETHORIZONTALFLY.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETCLARIFIER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETFORM.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETMAPPER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETMATCHER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETPLUS.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETSCHEDULER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETCHART.json", 		
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETSHARING.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETDIRECTORY.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETTRANSLATION.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETEQUATION.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETMERGE.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widget/TCCLIQUIWIDGETATTACHMENT.json"
+      ]
+    },
+    {
+      "category": "UI",
+      "battery": "SCREEN",
+      "suiteName": "GENERIC UI - SCREEN TESTCASES",
+      "suiteDescription": "SCREEN ACTIONS GENERIC UI TEST SUITE",
+      "note": "GENERIC UI SCREEN",
+      "testCases": [
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENNAVIGATE.json",
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENRESET.json",
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENREFRESH.json",
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENEXPORTVIEWZONE.json",
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENPASTEDATA.json",
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENPREFERENCES.json",
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENFAVORITES.json",
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENTREEVIEW.json",
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENINTEGRATEDVIEW.json",
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENHISTORY.json",
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENSOURCE.json",
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENVERSIONS.json",
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENACCORDION.json",
+	        "src/test/resources/testdata/ui_actions/ui_screen/TCCLIQSCREENCLEARFILTER.json"
+      ]
+    },
+    {
+      "category": "UI",
+      "battery": "FIND",
+      "suiteName": "GENERIC UI - FIND TESTCASES",
+      "suiteDescription": "FIND ACTIONS GENERIC UI TEST SUITE",
+      "note": "GENERIC UI FIND",
+      "testCases": [
+	        "src/test/resources/testdata/ui_actions/ui_find/TCCLIQUIFINDSORT.json",
+	        "src/test/resources/testdata/ui_actions/ui_find/TCCLIQUIFINDFILTER.json",
+	        "src/test/resources/testdata/ui_actions/ui_find/TCCLIQUIFINDSEARCH.json",
+	        "src/test/resources/testdata/ui_actions/ui_find/TCCLIQUIFINDCHOOSER.json"
+      ]
+    },
+    {
+      "category": "UI",
+      "battery": "BUTTON",
+      "suiteName": "GENERIC UI - BUTTON TESTCASES",
+      "suiteDescription": "BUTTON ACTIONS GENERIC UI TEST SUITE",
+      "note": "GENERIC UI BUTTON",
+      "testCases": [
+	        "src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONSAVE.json",
+	        "src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONSUBMIT.json",
+	        "src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONREVISE.json",
+	        "src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONWITHDRAW.json",
+	        "src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONCLONE.json",
+	        "src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONDENY.json",
+	        "src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONDELETE.json",
+	        "src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONDISCARD.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONAPPROVE.json"
+      ]
+    },
+    {
+      "category": "UI",
+      "battery": "LIST",
+	  "suiteName": "GENERIC UI - LIST TESTCASES",
+	  "suiteDescription": "LIST ACTIONS GENERIC UI TEST SUITE",
+	  "note": "GENERIC UI LIST",
+	  "testCases": [
+	  		"src/test/resources/testdata/ui_actions/ui_list/TCCLIQUILISTSTATIQZ.json",
+	  		"src/test/resources/testdata/ui_actions/ui_list/TCCLIQUILISTDYNAMIQZ.json"
+	  ]
+	}
+  ]
+}

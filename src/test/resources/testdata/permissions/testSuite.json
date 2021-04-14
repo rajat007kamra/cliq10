@@ -1,0 +1,50 @@
+{
+  "suites": [
+    {
+      "category": "BASICS",
+      "battery": "PERMISSION",
+      "suiteName": "PERMISSIONS_PROCESSES",
+      "suiteDescription": "PROCESSES TEST SUITE",
+      "note": "PROCESSES PERMISSIONS",
+      "testCases": [
+        "src/test/resources/testdata/permissions/processes/PERMCHECKREALMACCESS.json",
+        "src/test/resources/testdata/permissions/processes/PERMENTITIESPROCESSACCESS.json",
+        "src/test/resources/testdata/permissions/processes/PERMENTITYAFFILIATESPROCESS.json",
+        "src/test/resources/testdata/permissions/processes/PERMENTITYOWNERSPROCESSACCESS.json",
+        "src/test/resources/testdata/permissions/processes/PERMINCORPORATIONSPROCESS.json",
+        "src/test/resources/testdata/permissions/processes/PERMLOCATIONSPROCESS.json"
+      ]
+    },
+    {
+      "category": "BASICS",
+      "battery": "PERMISSION",
+      "suiteName": "PERMISSIONS_REPORTS",
+      "suiteDescription": "REPORTS TEST SUITE",
+      "note": "REPORTS PERMISSIONS",
+      "testCases": [
+        "src/test/resources/testdata/permissions/reports/PERMDASHBOARDSPROCESSACCESS.json",
+        "src/test/resources/testdata/permissions/reports/PERMREPORTSPROCESSACCESS.json"
+      ]
+    },
+    {
+      "category": "BASICS",
+      "battery": "PERMISSION",
+      "suiteName": "PERMISSIONS_SETTINGS",
+      "suiteDescription": "SETTINGS TEST SUITE",
+      "note": "SETTINGS PERMISSIONS",
+      "testCases": [
+        "src/test/resources/testdata/permissions/settings/PERMSUBTENANTPROCESSACCESS.json"
+      ]
+    },
+    {
+      "category": "BASICS",
+      "battery": "PERMISSION",
+      "suiteName": "PERMISSIONS_AUDITCAPABILITIES",
+      "suiteDescription": "PROCESSES TEST SUITE",
+      "note": "AUDIT CAPABILITIES PERMISSIONS",
+      "testCases": [
+        "src/test/resources/testdata/permissions/auditcapabilities/PERMCHECKAUDITCAPABILITIES.json"
+      ]
+    }
+  ]
+}

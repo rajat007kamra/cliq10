@@ -1,0 +1,45 @@
+{
+  "testType": "SHARE",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "SHARE EXISTING REPORT",
+  "group": "TEST REPORTS",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREP045",
+  "testName": "REPORTS_TEMPLATENAMEFORRECORD_InAppShareWithInternalUser",
+  "testDescription": "SELECT ADHOC REPORT AND SHARE WITH INTERNAL USERS",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS"
+      }
+    },
+    {
+      "name": "EXECUTE-REPORT",
+      "context": {
+        "template": "BOTZ.SHARING RIGHTS",
+        "selectTemplateRow": "1",
+        "run": "YES",        
+        "users": [
+          {
+            "name": "ARUN.KAPOOR"
+          }
+		],		
+		"button": "RUN"
+		}
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

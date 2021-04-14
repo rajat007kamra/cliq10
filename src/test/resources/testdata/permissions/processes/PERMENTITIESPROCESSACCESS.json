@@ -1,0 +1,173 @@
+{
+  "testType": "ASSIGN",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "ASSIGN PERMISSIONS",
+  "group": "TEST PERMISSIONS",
+  "category": "BASICS",
+  "battery": "PERMISSION",
+  "testId": "PERMENTITIESPROCESSACCESS",
+  "testName": "PERMISSIONS_CheckEntitiesProcessReadOnlyAccess",
+  "testDescription": "CHECK READ ONLY ACCESS OF ENTITY PROCESS TO USER",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ-.PERMISSIONS-01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "ENTITIES"
+      }
+    },
+    {
+      "name": "CREATE-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "REVISE-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "SAVE-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "WITHDRAW-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "APPROVE-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "DENY-RECORD",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "ENTITY",
+            "text": "AUTO TEST DATA2"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "CHECK-RECORD",
+      "context": {
+      "records" : "ASSIGNED",
+        "column": [
+          {
+            "title": "ASSIGNED ACCOUNTANT",
+            "expected": "BOTZ- PERMISSIONS-01"
+          }
+        ],
+        "checkrecord": "ALL"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "ENTITY",
+            "text": "AUTO TEST DATA4"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "CHECK-RECORD",
+      "context": {
+      "records" : "ASSIGNED",
+        "column": [
+          {
+            "title": "ASSIGNED PARALEGAL",
+            "expected": "BOTZ- PERMISSIONS-01"
+          }
+        ],
+        "checkrecord": "ALL"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "ENTITY",
+            "text": "TEST.SS001"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "CHECK-RECORD",
+      "context": {
+      "records" : "ASSIGNED",
+        "column": [
+          {
+            "title": "ASSIGNED TAX PERSON",
+            "expected": "BOTZ- PERMISSIONS-01"
+          }
+        ],
+        "checkrecord": "ALL"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "ENTITY",
+            "text": "AUTO TEST DATA3"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "CHECK-RECORD",
+      "context": {
+      "records" : "ASSIGNED",
+        "column": [
+          {
+            "title": "ASSIGNED HR",
+            "expected": "BOTZ- PERMISSIONS-01"
+          }
+        ],
+        "checkrecord": "ALL"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

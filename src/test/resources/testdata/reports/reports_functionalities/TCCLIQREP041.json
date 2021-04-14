@@ -1,0 +1,156 @@
+{
+  "testType": "REVISE_DEFFERED",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "REVISE ADHOC REPORT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQREP041",
+  "testName": "REPORTS_TEMPLATENAMEFORRECORD_ReviseName",
+  "testDescription": "REVISE THE NAME OF THE EXISTING ADHOC REPORT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "REPORT",
+            "text": "TEMPLATE TEST 03282020"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "DOWNLOAD-ATTACHMENTS",
+      "context": {
+        "fileToVerify": ["TEMPLATE TEST"],
+        "isDownload": "YES",
+        "fileToDownload": ["TEMPLATE TEST"]
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "OPEN-FORM"
+    },
+    {
+      "name": "POPULATE-FORM",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE",
+            "value": "TEMPLATE TEST 05102020"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SAVE-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SAVE",
+        "message": "SAVED!"
+      }
+    },
+    {
+      "name": "CLOSE-WIDGET"
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "REPORT",
+            "text": "TEMPLATE TEST 05102020"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "zone_name": "VIEW ZONE",
+        "column": [
+          {
+            "variable": "STATUS",
+            "expected": "PENDING"
+          }
+        ]
+      }
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "REFRESH",
+        "message": "REFRESHED!"
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "REFRESH",
+        "message": "REFRESHED!"
+      }
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "zone_name": "VIEW ZONE",
+        "column": [
+          {
+            "variable": "STATUS",
+            "expected": "COMPLETED"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

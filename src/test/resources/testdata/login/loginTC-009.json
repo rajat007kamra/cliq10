@@ -1,0 +1,22 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN009",
+  "testName": "LOGIN_FORGOTPASSWORD_WithInvalidUsername",
+  "testDescription": "TRY FORGOT PASSWORD WITH INVALID USERNAME",
+  "note": "",
+  "actions": [
+    {
+      "name": "FORGOT-PASSWORD",
+      "context": {
+        "username": "RAJT.API",
+        "securityanswer": "PUPPET"
+        }
+    }
+  ]
+}

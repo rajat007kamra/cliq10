@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="LOGIN - CORE TESTCASES">
+  <parameter name="parallel" value="false"/>
+  <listeners>
+    <listener class-name="testNG.utils.TestNGEmailableReport"/>
+  </listeners>
+  <test name="LOGIN - CORE TESTCASES">
+    <parameter name="preserve-order" value="true"/>
+    <classes>
+      <class name="tests.ui.LOGIN_VALIDCREDENTIALS_CORRECTUSERNAMEANDPASSWORD"/>
+    </classes>
+  </test> <!-- LOGIN - CORE TESTCASES -->
+</suite> <!-- LOGIN - CORE TESTCASES -->

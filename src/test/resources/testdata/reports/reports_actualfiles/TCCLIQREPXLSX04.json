@@ -1,0 +1,40 @@
+{
+  "testType": "REPORT CREATION",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "NEW REPORT",
+  "group": "TEST REPORT",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREPXLSX04",
+  "testName": "REPORTS_EXCEL_ONETIME_XLSX_STANDARDHOLDINGSSUMMARY",
+  "testDescription": "CREATE EXCEL ONETIME XLSX STANDARD HOLDINGS SUMMARY REPORT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS"
+      }
+    },
+    {
+      "name": "EXECUTE-REPORT",
+      "context": {
+        "template": "STANDARD HOLDINGS SUMMARY",
+        "selectTemplateRow": "1",
+        "run": "YES",
+        "button": "RUN"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

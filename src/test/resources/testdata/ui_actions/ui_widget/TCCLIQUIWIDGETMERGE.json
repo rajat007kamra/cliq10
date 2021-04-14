@@ -1,0 +1,49 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "WIDGET",
+  "testId": "TCCLIQUIWIDGETMERGE",
+  "testName": "UI_WIDGET_MERGE",
+  "testDescription": "MERGE EXISTING ROW",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "EMPLOYEES",
+        "column": [
+          {
+            "title": "STATE",
+            "text": "PENDING"
+          },
+          {
+            "title": "EMPLOYEE",
+            "text": "MJ-PERM 002 004"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "PERFORM-RIGHTCLICK",
+      "context": {
+        "RowNumber": "1",
+        "Option": "MERGE"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

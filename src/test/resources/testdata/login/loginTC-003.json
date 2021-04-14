@@ -1,0 +1,23 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN003",
+  "testName": "LOGIN_INVALIDCREDENTIALS_WhenPasswordIsIncorrect",
+  "testDescription": "TRY INCORRECT PASSWORD",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "RAJAT.AP",
+        "password": "udhfuihf",
+        "expected_error": "LOGIN FAILED: CHECK USERNAME/PASSWORD"
+     }
+    }
+  ]
+}

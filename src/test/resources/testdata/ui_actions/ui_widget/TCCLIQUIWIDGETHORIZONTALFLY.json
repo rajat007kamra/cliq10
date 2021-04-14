@@ -1,0 +1,73 @@
+{
+"testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "WIDGET",
+  "testId": "TCCLIQUIWIDGETHORIZONTALFLY",
+  "testName": "UI_WIDGET_HORIZONTALFLY",
+  "testDescription": "POPULATE HORIZONTAL FLYOUT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "EMPLOYEES",
+        "column": [
+          {
+            "title": "EMPLOYEE",
+            "text": "ARUN KAPOOR"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "MODIFY-ACCORDION",
+      "context": {
+        "accordion": "RIGHT",
+        "state": "EXPAND"
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "OPEN-FLYOUT",
+      "context": {
+        "flexname": "QUICKLIST",
+        "flyoutname": "EMPLOYEE ADDRESS"
+      }
+    },
+    {
+      "name": "POPULATE-HORIZONTALFLYOUT",
+      "context": {
+        "column": [
+          {
+            "tittle": "TYPE",
+            "text": "PERSONAL"
+          },
+          {
+            "tittle": "STREET",
+            "text": "No-2"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

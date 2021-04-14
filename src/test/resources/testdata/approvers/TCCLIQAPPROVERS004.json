@@ -1,0 +1,54 @@
+{
+  "testType": "APPROVERS",
+  "sector": "MEZOCLIQ",
+  "module": "APPROVERS",
+  "feature": "APPROVERS",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "APPROVERS",
+  "testId": "TCCLIQAPPROVERS001",
+  "testName": "APPROVERS_PERMISSION_TO_INDIVIDUAL_FOR_DENIAL",
+  "testDescription": "DENIAL_CHECK_OF_DESIGNATED_APPROVER_TO_PROCESSES_IN_PRIZE",
+  "testObjectives": "Approvers",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "GURKIRAT.SINGH"
+      }
+    },
+        {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "LOCATIONS"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ONBOARDING"
+          },
+          {
+            "title": "LOCATION",
+            "text": "MODEL TOWN"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "DENY-RECORD",
+      "context": {
+      "access": "YES"
+       }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

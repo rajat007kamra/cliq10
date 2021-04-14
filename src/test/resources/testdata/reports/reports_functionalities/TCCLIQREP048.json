@@ -1,0 +1,86 @@
+{
+  "testType": "SHARE",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "SHARE EXISTING REPORT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQREP048",
+  "testName": "REPORTS_TEMPLATENAMEFORRECORD_ShareUsingFTP",
+  "testDescription": "SHARE THE EXISTING ADHOC REPORTS USING FTP",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS",
+        "column": [
+          {
+            "title": "REPORT",
+            "text": "BOTZ.SHARE FTP"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "MODIFY-ACCORDION",
+      "context": {
+        "accordion": "RIGHT",
+        "state": "EXPAND"
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "OPEN-FLYOUT",
+      "context": {
+        "flexname": "QUICKLIST",
+        "flyoutname": "DESTINATION FTP"
+      }
+    },
+    {
+      "name": "POPULATE-HORIZONTALFLYOUT",
+      "context": {
+        "column": [
+          {
+            "title": "FTP",
+            "text": "ALFA LAVA"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "CLOSE-WIDGET"
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

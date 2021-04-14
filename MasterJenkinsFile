@@ -1,0 +1,129 @@
+pipeline {
+    agent {
+    	label "BOT"
+    }
+    environment {
+    	Browser = "${env.Browser}"
+    	AppUrl = "${env.AppUrl}"
+    	GitBranch = "${env.GitBranch}"
+    }
+    
+    stages {
+       stage('UI Tests') {
+            failFast true
+            parallel {
+                stage("cliq-login") {
+                     steps {
+                     	script {
+                     		try {
+                        	    build job: "cliq-10/cliq-login", wait: true,
+                            		parameters: [[$class: 'StringParameterValue', name: 'Browser', value: "${env.Browser}"],
+                             		[$class: 'StringParameterValue', name: 'AppUrl', value: "${env.AppUrl}"],
+                             		[$class: 'StringParameterValue', name: 'GitBranch', value: "${env.GitBranch}"],
+                             		[$class: 'StringParameterValue', name: 'sendEmailTo', value: "testinq@meZocliq.com,vineet.mathur@meZocliq.com"]]
+                    		}catch (Exception e) {
+                    			currentBuild.result = 'FAILURE'
+                    		}
+                    	}
+                    }                	
+                }
+                
+                stage("cliq-generic-ui") {
+                     steps {
+                     	script {
+                     		try {                     
+                           		 build job: "cliq-10/cliq-generic-ui", wait: true,
+                            		parameters: [[$class: 'StringParameterValue', name: 'Browser', value: "${env.Browser}"],
+                             		[$class: 'StringParameterValue', name: 'AppUrl', value: "${env.AppUrl}"],
+                             		[$class: 'StringParameterValue', name: 'GitBranch', value: "${env.GitBranch}"],
+                             		[$class: 'StringParameterValue', name: 'sendEmailTo', value: "testinq@meZocliq.com,luciana.bazoberry@meZocliq.com,sushant.kataria@meZocliq.com"]]
+                     		}catch (Exception e) {
+                    			currentBuild.result = 'FAILURE'
+                    		}
+                    	}
+                    }                	
+                } 
+                    
+                stage("cliq-files") {
+                     steps {
+                     	script {
+                     		try {                     
+                            	build job: "cliq-10/cliq-files", wait: true,
+                            		parameters: [[$class: 'StringParameterValue', name: 'Browser', value: "${env.Browser}"],
+                             		[$class: 'StringParameterValue', name: 'AppUrl', value: "${env.AppUrl}"],
+                             		[$class: 'StringParameterValue', name: 'GitBranch', value: "${env.GitBranch}"],
+                             		[$class: 'StringParameterValue', name: 'sendEmailTo', value: "testinq@meZocliq.com,ankit.aggarwal@meZocliq.com,sunny.sharma@meZocliq.com,dhananjay.kumar@meZocliq.com,kishor.papnoi@meZocliq.com"]]
+                      		}catch (Exception e) {
+                    			currentBuild.result = 'FAILURE'
+                    		}
+                    	}
+                    }                	
+                } 
+                
+                stage("cliq-approvers") {
+                     steps {
+                     	script {
+                     		try {                     
+                            	build job: "cliq-10/cliq-approvers", wait: true,
+                            		parameters: [[$class: 'StringParameterValue', name: 'Browser', value: "${env.Browser}"],
+                             		[$class: 'StringParameterValue', name: 'AppUrl', value: "${env.AppUrl}"],
+                             		[$class: 'StringParameterValue', name: 'GitBranch', value: "${env.GitBranch}"],
+                             		[$class: 'StringParameterValue', name: 'sendEmailTo', value: "testinq@meZocliq.com,chris.masters@mezocliq.com"]]
+                      		}catch (Exception e) {
+                    			currentBuild.result = 'FAILURE'
+                    		}
+                    	}
+                    }                	
+                } 
+                
+                stage("cliq-reports") {
+                     steps {
+                     	script {
+                     		try {                     
+                            	build job: "cliq-10/cliq-reports", wait: true,
+                            		parameters: [[$class: 'StringParameterValue', name: 'Browser', value: "${env.Browser}"],
+                             		[$class: 'StringParameterValue', name: 'AppUrl', value: "${env.AppUrl}"],
+                             		[$class: 'StringParameterValue', name: 'GitBranch', value: "${env.GitBranch}"],
+                             		[$class: 'StringParameterValue', name: 'sendEmailTo', value: "testinq@meZocliq.com,sharat.chelluboina@meZocliq.com,uditha.bulumulla@meZocliq.com,gaurav.deshmukh@meZocliq.com,ankit.aggarwal@meZocliq.com"]]
+                      		}catch (Exception e) {
+                    			currentBuild.result = 'FAILURE'
+                    		}
+                    	}
+                    }                	
+                } 
+                 
+	             stage("cliq-permissions") {
+	                 steps {
+	                 	script {
+	                 		try {                     
+	                        	build job: "cliq-10/cliq-permissions", wait: true,
+	                        		parameters: [[$class: 'StringParameterValue', name: 'Browser', value: "${env.Browser}"],
+	                         		[$class: 'StringParameterValue', name: 'AppUrl', value: "${env.AppUrl}"],
+	                         		[$class: 'StringParameterValue', name: 'GitBranch', value: "${env.GitBranch}"],
+	                         		[$class: 'StringParameterValue', name: 'sendEmailTo', value: "testinq@meZocliq.com,chris.masters@mezocliq.com"]]
+	                  		}catch (Exception e) {
+	                			currentBuild.result = 'FAILURE'
+	                		}
+	                	}
+	                }                	
+	            }      
+	                   
+                 stage("cliq-templates") {
+                     steps {
+                     	script {
+                     		try {                     
+                            	build job: "cliq-10/cliq-reports", wait: true,
+                            		parameters: [[$class: 'StringParameterValue', name: 'Browser', value: "${env.Browser}"],
+                             		[$class: 'StringParameterValue', name: 'AppUrl', value: "${env.AppUrl}"],
+                             		[$class: 'StringParameterValue', name: 'GitBranch', value: "${env.GitBranch}"],
+                             		[$class: 'StringParameterValue', name: 'sendEmailTo', value: "${sendEmailTo}"]]
+                      		}catch (Exception e) {
+                    			currentBuild.result = 'FAILURE'
+                    		}
+                    	}
+                    }                	
+                }                               
+              }
+           }
+   		}
+	}

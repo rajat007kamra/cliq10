@@ -1,0 +1,26 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN012",
+  "testName": "LOGIN_VALIDCREDENTIALS_WhenUserHasAccessToMultipleTenants",
+  "testDescription": "CHECK WHEN USER HAS ACCESS MULTIPLE SUBTENANT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "RAJAT.KAMRA",
+        "password": "Moonlight004$",
+        "subtenant": "MEZOCLIQ"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+ ]
+}

@@ -1,0 +1,105 @@
+{
+  "testType": "FILE-UPLOAD",
+  "sector": "SETTINGS->FEEDS",
+  "module": "FILES",
+  "feature": "UPLOAD ATTACHMENTS",
+  "group": "FILES",
+  "category": "INTEGRATION",
+  "battery": "FILES",
+  "testId": "DEMONONFIXEDINCOME",
+  "testName": "FILES_OUTBOUND_XML_DemoNonFixedIncome",
+  "testDescription": "UPLOAD A NEW FILE AND VERIFY ATTACHMENT FOR DEMO NON FIXED INCOME",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "FEEDS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "FILE NAME",
+            "text": "securities non fixed income markit_rundate_NEW_0924.csv"
+          },
+          {
+            "title": "PROCESS",
+            "text": "SECURITY"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "PERFORM-RIGHTCLICK",
+      "context": {
+        "RowNumber": "1",
+        "Option": "CLONE"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "report": "true",
+      "context": {
+        "path": "testdata/securities non fixed income markit_rundate_NEW_0924.csv",
+        "name": "securities non fixed income markit_rundate_NEW_0924.csv"
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "DOWNLOAD-ATTACHMENTS",
+      "context": {
+        "fileToVerify": ["securities non fixed income markit_rundate_NEW_0924.csv"],
+        "isDownload": "no",
+        "fileToDownload": [""]
+      }
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+    	"name": "OPEN-FORM"
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "zone_name": "EDIT ZONE",
+        "column": [
+          {
+            "variable": "SAMPLE OUTCOME",
+            "expected": "LOADED"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

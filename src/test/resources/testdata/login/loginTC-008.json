@@ -1,0 +1,22 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN",
+  "feature": "FORGOT PASSWORD",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN008",
+  "testName": "LOGIN_FORGOTPASSWORD_WithCorrectSecurityAnswer",
+  "testDescription": "CHECK FORGOT PASSWORD WITH CORRECT SECURITY ANSWER",
+  "note": "",
+  "actions": [
+    {
+      "name": "FORGOT-PASSWORD",
+      "context": {
+        "username": "RAJAT.API",
+        "securityanswer": "PUPPET@123"
+        }
+    }
+  ]
+}

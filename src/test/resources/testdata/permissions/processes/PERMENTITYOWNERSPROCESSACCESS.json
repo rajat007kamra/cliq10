@@ -1,0 +1,33 @@
+{
+  "testType": "ASSIGN",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "ASSIGN PERMISSIONS",
+  "group": "TEST PERMISSIONS",
+  "category": "BASICS",
+  "battery": "PERMISSION",
+  "testId": "PERMENTITYOWNERSPROCESSACCESS",
+  "testName": "PERMISSIONS_CheckEntityOwnersProcessAccessNo",
+  "testDescription": "CHECK ACCESS OF ENTITY OWNER PROCESS TO USER",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ-.PERMISSIONS-01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "ENTITY OWNERS",
+        "access": "NO"
+        
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "SCREEN",
+  "testId": "TCCLIQSCREENFAVORITES",
+  "testName": "UI_SCREEN_ADDFAVORITES",
+  "testDescription": "ADD PROCESS TO FAVORITES",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES"
+      }
+    },
+    {
+      "name": "ADD-FAVORITES",
+      "context": {
+        "action": "ADD",
+        "name": "TEMPLATES FAV"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

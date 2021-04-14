@@ -1,0 +1,40 @@
+{
+  "testType": "REPORT CREATION",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "NEW TEMPLATE",
+  "group": "TEST REPORT",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREPXLSX03",
+  "testName": "REPORTS_EXCEL_ONETIME_XLSX_STANDARDLOTSUMMARY",
+  "testDescription": "CREATE EXCEL ONETIME XLSX STANDARD LOT SUMMARY REPORT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS"
+      }
+    },
+    {
+      "name": "EXECUTE-REPORT",
+      "context": {
+        "template": "STANDARD LOT SUMMARY",
+        "selectTemplateRow": "1",
+        "run": "YES",
+        "button": "RUN"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

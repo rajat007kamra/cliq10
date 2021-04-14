@@ -1,0 +1,40 @@
+{
+  "testType": "REPORT CREATION",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "NEW REPORT",
+  "group": "TEST REPORT",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREPXLSX07",
+  "testName": "REPORTS_REPORTWRITER_PDF_STANDARDPOSITIONRECON",
+  "testDescription": "CREATE REPORT WRITER PDF STANDARD POSITION RECON",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS"
+      }
+    },
+    {
+      "name": "EXECUTE-REPORT",
+      "context": {
+        "template": "STANDARD POSITION RECON",
+        "selectTemplateRow": "1",
+        "run": "YES",
+        "button": "RUN"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

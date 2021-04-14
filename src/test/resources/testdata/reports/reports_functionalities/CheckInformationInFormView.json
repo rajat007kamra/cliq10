@@ -1,0 +1,53 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "VERIFY INFORMATION",
+  "group": "TEST REPORTS",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREP042",
+  "testName": "REPORTS_TEMPLATENAMEFORRECORD_CheckInformationInFormView",
+  "testDescription": "CHECK DISPLAY OF INFORMATION AT FORM VIEW OF A GENERATED REPORT WHICH WAS DEFINED IN TEMPLATE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS"
+      }
+    },
+    {
+      "name": "EXECUTE-REPORT",
+      "context": {
+        "template": "TEMP-ENTSHARES-1248887101",
+        "selectTemplateRow": "1",
+        "run": "YES",
+        "reports": [
+          {
+            "title": "STATUS",
+            "text": "GENERATED"
+          }
+        ],
+        "selectReportRow": "1",
+        "reportIcon": "INFORMATION",
+        "informations": [
+          {
+            "variable": "STATUS",
+            "expected": "GENERATED"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

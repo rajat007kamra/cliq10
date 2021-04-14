@@ -1,0 +1,34 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "FIND",
+  "testId": "TCCLIQUIFINDCHOOSER",
+  "testName": "UI_FIND_CHOOSER",
+  "testDescription": "ADD COLUMN TO VIEWZONE FROM CHOOSER",
+  "note": "",
+  "actions": [
+     {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "DASHBOARDS"
+      }
+    },
+    {
+      "name": "OPEN-CHOOSER"
+    },    
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

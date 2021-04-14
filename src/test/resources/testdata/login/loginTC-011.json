@@ -1,0 +1,25 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN011",
+  "testName": "LOGIN_VALIDCREDENTIALS_HavingLocalisedUsername",
+  "testDescription": "CHECK WITH VALID LOCALISED USERNAME",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001",
+        "password":"Tubelight004$"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+ ]
+}

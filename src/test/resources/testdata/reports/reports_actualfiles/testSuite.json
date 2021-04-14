@@ -1,0 +1,23 @@
+{
+  "suites": [
+    {
+        "category": "REPORTING",
+        "battery": "REPORTS",
+		"suiteName": "REPORTS_ACTUALFILES",
+		"suiteDescription": "REPORTS ACTUAL FILES TEST SUITE",
+		"note": "REPORTS ACTUAL FILES",
+		
+	 	"testCases": [
+	 		"src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX01.json",
+	    	"src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX02.json",
+	    	"src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX03.json",
+	    	"src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX04.json",
+	    	"src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX05.json",
+	    	"src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX06.json",
+	    	"src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX07.json",
+	    	"src/test/resources/testdata/reports/reports_actualfiles/TCCLIQREPXLSX08.json",
+	    	"src/test/resources/testdata/reports/reports_actualfiles/ReportsJson.json"
+	  		]
+	}
+]
+}

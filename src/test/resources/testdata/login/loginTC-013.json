@@ -1,0 +1,23 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN013",
+  "testName": "LOGIN_INVALIDCREDENTIALS_HavingSpecialChracterInUsername",
+  "testDescription": "TRY LOGIN WITH USERNAME HAVING SPECIAL CHARACTERS",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "RAJAT.KAMRA$",
+        "password":"Fishlight008$",
+        "expected_error":"LOGIN FAILED: CHECK USERNAME/PASSWORD"
+      }
+    }
+ ]
+}

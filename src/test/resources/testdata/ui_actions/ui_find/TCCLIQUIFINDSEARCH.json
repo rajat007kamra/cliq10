@@ -1,0 +1,49 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "FIND",
+  "testId": "TCCLIQUIFINDSEARCH",
+  "testName": "UI_FIND_SEARCH",
+    "testDescription": "SEARCH AND NAVIGATE TO PROCESS FROM GLOBAL SEARCH",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES"
+      }
+    },
+    {
+      "name": "PERFORM-GLOBALSEARCH",
+      "context": {
+        "text": "TEMP AGENT"
+      }
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+      "zone_name": "VIEW ZONE",
+        "column": [
+          {
+            "variable": "REPORT TEMPLATE",
+            "expected": "TEMP AGENT"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

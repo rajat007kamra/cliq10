@@ -1,0 +1,38 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "FIND",
+  "testId": "TCCLIQUIFINDSORT",
+  "testName": "UI_FIND_SORT",
+    "testDescription": "SORT COLUMN ON VIEWZONE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES"
+      }
+    },
+    {
+      "name": "PERFORM-SORT",
+      "context": {
+        "column": "REPORT TEMPLATE",
+        "order": "ASCENDING"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

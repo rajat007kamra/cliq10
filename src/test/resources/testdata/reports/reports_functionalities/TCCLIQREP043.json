@@ -1,0 +1,52 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "VERIFY EMAIL COUNT",
+  "group": "TEST REPORTS",
+  "testId": "TCCLIQREP043",
+  "testName": "REPORTS_TEMPLATENAMEFORRECORD_CheckEmailCounts",
+  "testDescription": "CHECK THE DISPLAY OF EMAIL COUNTS FOR SCHEDULED REPORTS AT VIEW ZONE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "REPORT",
+            "text": "BOTZ.CHECK EMAIL COUNT"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "zone_name": "VIEW ZONE",
+        "column": [
+          {
+            "variable": "EMAIL COUNT",
+            "expected": "---"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

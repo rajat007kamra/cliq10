@@ -1,0 +1,45 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "SCREEN",
+  "testId": "TCCLIQSCREENCLEARFILTER",
+  "testName": "UI_SCREEN_CLEARFILTER",
+  "testDescription": "CLEAR VIEWZONE FILTER",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES",
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "REPORT TEMPLATE",
+            "text": "TEMP AGENT"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "CLEAR-VZFILTER"
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

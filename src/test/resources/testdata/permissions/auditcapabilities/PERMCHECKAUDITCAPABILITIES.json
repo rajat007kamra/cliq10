@@ -1,0 +1,62 @@
+{
+  "testType": "ASSIGN",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "ASSIGN PERMISSIONS",
+  "group": "TEST PERMISSIONS",
+  "category": "BASICS",
+  "battery": "PERMISSION",
+  "testId": "PERMCHECKAUDITCAPABILITIES",
+  "testName": "PERMISSIONS_CheckAuditCapabilitiesAccess",
+  "testDescription": "CHECK USER HAS NO ACCESS OF DOCUMENTS REALM",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ-.PERMISSIONS-01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "SUBTENANTS"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "context": {
+        "access": "YES"
+      }
+    },
+    {
+      "name": "DOWNLOAD-ATTACHMENTS",
+      "context": {
+        "access": "YES"
+      }
+    },
+    {
+      "name": "EXPORT-VIEWZONE",
+      "context": {
+        "access": "NO"
+      }
+    },
+    {
+      "name": "MODIFY-ACCORDION",
+      "context": {
+        "accordion": "RIGHT",
+        "state": "EXPAND"
+      }
+    },
+    {
+      "name": "TIME-MACHINE",
+      "context": {
+        "access": "YES"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

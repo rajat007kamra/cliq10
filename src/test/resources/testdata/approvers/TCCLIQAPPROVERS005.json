@@ -1,0 +1,98 @@
+{
+  "testType": "APPROVERS",
+  "sector": "MEZOCLIQ",
+  "module": "APPROVERS",
+  "feature": "APPROVERS",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "APPROVERS",
+  "testId": "TCCLIQAPPROVERS001",
+  "testName": "APPROVERS_RULE_CONFIGURATION_ASSIGNED_TO_TEAM_FOR_APPROVAL",
+  "testDescription": "APPROVAL_RULE_CREATION_AND_ASSIGNED_TO_TEAM_FOR_APPROVAL",
+  "testObjectives": "Approvers",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "RAJAT.KAMRA"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "DEPARTMENTS"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ONBOARDING"
+          },
+          {
+            "title": "DEPARTMENT",
+            "text": "AUTO TEST BOTZ"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "APPROVE-RECORD",
+      "context": {
+      "access": "YES"
+       }
+    },
+    {
+      "name": "LOGOUT"
+    },
+    {
+    "name":"SWITCH-TAB",
+    "context":{
+        "switchtab":"CHILD"
+       }
+    },
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "UDAYBIR.AHLAWAT"
+      }
+    },
+        {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "DEPARTMENTS"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ONBOARDING"
+          },
+          {
+            "title": "DEPARTMENT",
+            "text": "AUTO TEST BOTZ"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "APPROVE-RECORD",
+      "context": {
+      "access": "YES"
+       }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

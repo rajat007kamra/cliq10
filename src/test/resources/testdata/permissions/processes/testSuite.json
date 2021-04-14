@@ -1,0 +1,19 @@
+{
+  "suites": [
+    {
+      "category": "BASICS",
+      "battery": "PERMISSION",
+      "suiteName": "PERMISSIONS_PROCESSES",
+      "suiteDescription": "PROCESSES TEST SUITE",
+      "note": "PROCESSES PERMISSIONS",
+      "testCases": [
+        "src/test/resources/testdata/permissions/processes/PERMCHECKREALMACCESS.json",
+        "src/test/resources/testdata/permissions/processes/PERMENTITIESPROCESSACCESS.json",
+        "src/test/resources/testdata/permissions/processes/PERMENTITYAFFILIATESPROCESS.json",
+        "src/test/resources/testdata/permissions/processes/PERMENTITYOWNERSPROCESSACCESS.json",
+        "src/test/resources/testdata/permissions/processes/PERMINCORPORATIONSPROCESS.json",
+        "src/test/resources/testdata/permissions/processes/PERMLOCATIONSPROCESS.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "VERIFY FTP COUNT",
+  "group": "TEST REPORTS",
+  "testId": "TCCLIQREP044",
+  "testName": "REPORTS_TEMPLATENAMEFORRECORD_CheckFTPCounts",
+  "testDescription": "CHECK THE DISPLAY OF FTP COUNT FOR SCHEDULED REPORTS AT VIEW ZONE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS",
+        "column": [
+          {
+            "title": "REPORT",
+            "text": "TESTING JSON TEMPLATE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "zone_name": "VIEW ZONE",
+        "column": [
+          {
+            "variable": "FTP COUNT",
+            "expected": "---"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

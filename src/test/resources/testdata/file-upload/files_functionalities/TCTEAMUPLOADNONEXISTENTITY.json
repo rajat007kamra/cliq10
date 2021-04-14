@@ -1,0 +1,105 @@
+{
+  "testType": "FILE-UPLOAD",
+  "sector": "ADMIN->FEEDS",
+  "module": "FILES",
+  "feature": "UPLOAD ATTACHMENTS",
+  "group": "FILES",
+  "category": "INTEGRATION",
+  "battery": "FILES",
+  "testId": "TCTEAMUPLOADNONEXISTENTITY",
+  "testName": "FILES_INBOUND_CSV_TryUploadingAFileBySupplyingANonExistingEntity",
+  "testDescription": "UPLOAD A NEW FILE WITH INVALID ENTITY MEANS, ENTITY WHICH IS NOT LISTED IN OUR SYSTEM DATABASE.",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "FEEDS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "FILE NAME",
+            "text": "Team_102020_ENTITY_12345.csv"
+          },
+          {
+            "title": "PROCESS",
+            "text": "TEAM"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "PERFORM-RIGHTCLICK",
+      "context": {
+        "RowNumber": "1",
+        "Option": "CLONE"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "report": "true",
+      "context": {
+        "path": "testdata/Team_102020_ENTITY_12345.csv",
+        "name": "Team_102020_ENTITY_12345.csv"
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "DOWNLOAD-ATTACHMENTS",
+      "context": {
+        "fileToVerify": ["Team_102020_ENTITY_12345.csv"],
+        "isDownload": "no",
+        "fileToDownload": [""]
+      }
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+    	"name": "OPEN-FORM"
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "zone_name": "EDIT ZONE",
+        "column": [
+          {
+            "variable": "SAMPLE OUTCOME",
+            "expected": "PRE-PROCESSED (CHECK ERRORS)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

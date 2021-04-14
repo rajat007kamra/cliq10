@@ -1,0 +1,92 @@
+{
+  "testType": "CREATE",
+  "sector": "ASSET MANAGEMENT",
+  "module": "TEMPLATE",
+  "feature": "NEW TEMPLATE",
+  "group": "TEST TEMPLATE",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREP005",
+  "testName": "TEMPLATES_EXCEL_SINGLE_EXCEL_CreateADuplicateTemplateInOtherSubtenant",
+  "testDescription": "CREATE A NEW TEMPLATE WITH THE NAME OF AN EXISTING TEMPLATE IN OTHER SUBTENANT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "REPORT TEMPLATES"
+      }
+    },
+    {
+      "name": "CREATE-RECORD"
+    },
+    {
+      "name": "POPULATE-FORM",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE TYPE",
+            "value": "EXCEL"
+          },
+          {
+            "variable": "PROCESS",
+            "value": "VENDOR"
+          },
+          {
+            "variable": "TEMPLATE NAME",
+            "value": "DOWNLOAD FILE-HASHCODE"
+          },
+          {
+            "variable": "BURST MODE",
+            "value": "YES"
+          },          
+          {
+            "variable": "DELIVERY FORMAT",
+            "value": "CSV"
+          }          
+        ]
+      }
+    },
+    {
+      "name": "SAVE-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+      	"action": "SAVE",
+        "message": "SAVED!"
+      }      
+    },
+    {
+      "name": "CLOSE-WIDGET"
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+      	"action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }      
+    },
+    {
+      "name": "DOWNLOAD-ATTACHMENTS",
+      "context": {
+        "fileToVerify": ["DOWNLOAD FILE-HASHCODE.XLSX"],
+        "isDownload": "YES",
+        "fileToDownload": ["DOWNLOAD FILE-HASHCODE.XLSX"]
+      }
+    },    
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "SCREEN",
+  "testId": "TCCLIQSCREENTREEVIEW",
+  "testName": "UI_SCREEN_TREEVIEW",
+  "testDescription": "TREE VIEW FOR EXISTING ROW",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "SUBTENANTS",
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "SUBTENANT",
+            "text": "BOTZ.MEZOCLIQ"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "OPEN-TREEVIEW"
+    },
+    {
+      "name": "CLOSE-WIDGET"
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

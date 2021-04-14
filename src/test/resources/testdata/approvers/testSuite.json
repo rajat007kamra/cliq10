@@ -1,0 +1,32 @@
+{
+  "suites": [
+    {
+    	 "category": "BASICS",
+         "battery": "APPROVERS",
+         "suiteName": "APPROVERS TEST SUITE",
+         "suiteDescription": "APPROVERS TEST SUITE",
+         "note": "APPROVERS TEST CASES",
+         
+         "testCases": [
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS001.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS002.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS003.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS004.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS005.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS006.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS007.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS008.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS009.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS010.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS011.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS012.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS013.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS014.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS015.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS016.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS017.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS018.json",
+         "src/test/resources/testdata/approvers/TCCLIQAPPROVERS019.json"
+         ]
+}]
+}

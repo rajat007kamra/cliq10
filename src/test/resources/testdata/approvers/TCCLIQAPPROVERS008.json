@@ -1,0 +1,54 @@
+{
+  "testType": "APPROVERS",
+  "sector": "MEZOCLIQ",
+  "module": "APPROVERS",
+  "feature": "APPROVERS",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQAPPROVERS001",
+  "category": "BASICS",
+  "battery": "APPROVERS",
+  "testName": "APPROVERS_RULE_CONFIGRATION_FOR_VETO_FOR_DENIAL",
+  "testDescription": "APPROVAL_RULE_CREATION_AND_ASSIGNED_TO_VETO_FOR_DENY",
+  "testObjectives": "Approvers",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "RAJAT.KAMRA"
+      }
+    },
+        {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "DEPARTMENTS"
+      }
+    },
+    {
+      "name": "PERFORM-VZFILTER",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ONBOARDING"
+          },
+          {
+            "title": "DEPARTMENT",
+            "text": "VETO TEST APPROVERS"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "DENY-RECORD",
+      "context": {
+      "access": "YES"
+       }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

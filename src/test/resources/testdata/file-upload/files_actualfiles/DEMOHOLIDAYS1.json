@@ -1,0 +1,109 @@
+{
+  "testType": "FILE-UPLOAD",
+  "sector": "SETTINGS->FEEDS",
+  "module": "FILES",
+  "feature": "UPLOAD ATTACHMENTS",
+  "group": "FILES",
+  "category": "INTEGRATION",
+  "battery": "FILES",
+  "testId": "DEMOHOLIDAYS1",
+  "testName": "FILES_INBOUND_EXCEL_DemoHolidays",
+  "testDescription": "UPLOAD A NEW FILE AND VERIFY ATTACHMENT FOR DEMO HOLIDAYS",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "SETTINGS",
+        "process": "FEEDS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "FEED",
+            "text": "ODS TEAM*"
+          },
+          {
+            "title": "FILE NAME",
+            "text": "finance_issuer_NEW_0924A.csv"
+          },
+          {
+            "title": "PROCESS",
+            "text": "TEAM"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "PERFORM-RIGHTCLICK",
+      "context": {
+        "RowNumber": "1",
+        "Option": "CLONE"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "report": "true",
+      "context": {
+        "path": "testdata/finance_issuer_NEW_0924A.csv",
+        "name": "finance_issuer_NEW_0924A.csv"
+      }
+    },
+    {
+      "name": "SUBMIT-RECORD"
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "DOWNLOAD-ATTACHMENTS",
+      "context": {
+        "fileToVerify": ["finance_issuer_NEW_0924A.csv"],
+        "isDownload": "no",
+        "fileToDownload": [""]
+      }
+    },
+    {
+      "name": "REFRESH-SCREEN"
+    },
+    {
+      "name": "CHECK-CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+    	"name": "OPEN-FORM"
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "zone_name": "EDIT ZONE",
+        "column": [
+          {
+            "variable": "SAMPLE OUTCOME",
+            "expected": "LOADED"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

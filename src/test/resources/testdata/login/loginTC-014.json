@@ -1,0 +1,23 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "category": "BASICS",
+  "battery": "LOGIN",
+  "testId": "TCCLIQLOGIN014",
+  "testName": "LOGIN_SECURITYTESTING_UsingSqlInjection",
+  "testDescription": "TRY WITH SQL INJECTION",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "1==1",
+        "password": "1==1",
+        "expected_error":"LOGIN FAILED: CHECK USERNAME/PASSWORD"
+      }
+    }
+ ]
+}

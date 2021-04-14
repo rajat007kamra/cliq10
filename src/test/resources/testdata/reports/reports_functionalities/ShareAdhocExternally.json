@@ -1,0 +1,41 @@
+{
+  "testType": "SHARE",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "SHARE EXISTING REPORT",
+  "group": "TEST REPORT",
+  "category": "REPORTING",
+  "battery": "REPORTS",
+  "testId": "TCCLIQREP047",
+  "testName": "REPORTS_TEMPLATENAMEFORRECORD_ShareAdhocExternally",
+  "testDescription": "SHARE THE ADHOC REPORTS EXTERNALLY BY CHOOSING THE NAMES",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "REPORTS",
+        "process": "REPORTS"
+      }
+    },
+    {
+      "name": "EXECUTE-REPORT",
+      "context": {
+        "template": "BOTZ.SHARE EXTERNAL USER",
+        "selectTemplateRow": "1",
+        "run": "YES",
+        "emails": ["CHITRA08SINGH1@GMAIL.COM"],
+		"button": "RUN"
+		}
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}
